@@ -8,6 +8,29 @@
   border-right: 5px solid $c1;
 }
 
+.formTop {
+  padding: 15px 0;
+  background-color: $c3;
+  text-align: center;
+
+  a {
+    &:hover {
+      text-decoration: none;
+
+      > h1 {
+        color: white;
+      }
+    }
+
+    h1 {
+      color: $c1;
+      font-size: 3rem;
+      font-family: $display;
+      @include transition;
+    }
+  }
+}
+
 .headerWrap {
   height: 150px;
   width: 95%;

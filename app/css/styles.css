@@ -1482,6 +1482,21 @@ nav {
   border-left: 5px solid #F8D9D6;
   border-right: 5px solid #F8D9D6; }
 
+.formTop {
+  padding: 15px 0;
+  background-color: #42929D;
+  text-align: center; }
+  .formTop a:hover {
+    text-decoration: none; }
+    .formTop a:hover > h1 {
+      color: white; }
+  .formTop a h1 {
+    color: #F8D9D6;
+    font-size: 3rem;
+    font-family: "Lobster Two", cursive;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease; }
+
 .headerWrap {
   height: 150px;
   width: 95%;
