@@ -10,7 +10,7 @@
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
-          templateUrl: 'views/home.html',
+          templateUrl: 'views/login.html',
           controller: 'MainController',
         })
         .when('/404', {
