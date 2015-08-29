@@ -9,6 +9,7 @@
             console.log(routeId);
             console.log(data);
             var foundUser = _.where(data, {_id: routeId})
+            console.log(foundUser[0]);
             $scope.user = foundUser[0];
             $scope.email = foundUser[0].email;
             $scope.name = foundUser[0].name;
@@ -23,6 +24,14 @@
             $scope.stylist = foundUser[0].stylist;
             $scope.active = foundUser[0].active;
             $scope.cardInfo = foundUser[0].cardInfo;
+
+            $scope.stylistCheck = function() {
+              if ($scope.stylist === true) {
+                return true;
+              } else {
+                return false;
+              }
+            }
 
             function averageRating(){
               var totalRating = 0;

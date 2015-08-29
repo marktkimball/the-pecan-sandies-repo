@@ -9,7 +9,7 @@
     <i ng-if="finalRating >= 4" class="fa fa-star"></i>
     <i ng-if="finalRating >= 5" class="fa fa-star"></i>
   </div>
-  <div class="skillsWrap">
+  <div ng-if="stylistCheck()" class="skillsWrap">
     <div class="skillBlock">
       <div class="circles hair">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -242,12 +242,13 @@
     <div class="about">
       <div class="aboutName">
         <h1>{{name}}</h1>
-        <h1>Stylist</h1>
+        <h1 ng-if="stylistCheck()">Stylist</h1>
+        <h1 ng-if="!stylistCheck()">Model</h1>
       </div>
-      <p>{{about}}</p>
+      <p ng-if="stylistCheck()" >{{about}}</p>
     </div>
   </div>
-  <div class="availability">
+  <div ng-if="stylistCheck()" class="availability">
     <h1>Availability</h1>
     <div class="dates">
       <div class="date sunday">
