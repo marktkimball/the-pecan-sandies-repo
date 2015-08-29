@@ -88,25 +88,37 @@
       }
 
       $scope.submitForm = function(userinfo, event){
-        console.log(event);
         var someEmpty = $('input[type=text]').filter(function(){
             return $.trim(this.value).length === 0;
         }).length > 0;
 
-        if (someEmpty || $scope.userDays.length === 0 || $scope.userSkills.length === 0) {
-          console.log(someEmpty);
-          console.log($scope.userDays.length);
-          console.log($scope.userSkills.length);
+        if (someEmpty || $scope.userDays.length === 0 || $scope.userSkills.length === 0) {} else {
+          var noTimes = [];
 
-        } else {
-          var routeId = $routeParams.Id;
-          $scope.userInfo._id = routeId;
-          $scope.userInfo.skills = $scope.userSkills;
-          $scope.userInfo.availability = $scope.userDays;
-          console.log($scope.userInfo);
-          LoginService.editAccount($scope.userInfo).success(function(data){
-             $location.path('/account/' + data._id);
-          });
+          var checkTimes = function() {
+            _.each($scope.userDays, function(el, idx, list) {
+              var startDate = $('.' + $scope.userDays[idx]).siblings('div').children('input:first-of-type');
+              var endDate = $('.' + $scope.userDays[idx]).siblings('div').children('input:first-of-type');
+              if (startDate[0].value === '' || endDate[0].value === '') {
+                console.log('No time!');
+                noTimes.push($scope.userDays[idx]);
+              } else {
+                noTimes = _.without(noTimes, $scope.userDays[idx]);
+              }
+            })
+          }
+          checkTimes();
+
+          if (noTimes.length > 0) {} else {
+            var routeId = $routeParams.Id;
+            $scope.userInfo._id = routeId;
+            $scope.userInfo.skills = $scope.userSkills;
+            $scope.userInfo.availability = $scope.userDays;
+            console.log($scope.userInfo);
+            LoginService.editAccount($scope.userInfo).success(function(data){
+               $location.path('/account/' + data._id);
+            });
+          }
         }
       }
 

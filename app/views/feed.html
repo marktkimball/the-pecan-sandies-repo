@@ -268,7 +268,7 @@
     <div class="feedCard" ng-repeat="card in stylists | filter:filter">
       <div class="feedCardInfo">
         <div class="feedCardImage">
-          <img src="{{card.picture}}">
+          <img class="feedCardPicture" src="{{card.picture}}">
         </div>
         <div class="feedCardRating">
           <p ng-if="card.averageRating == 0">Unrated</p>

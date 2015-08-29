@@ -22,6 +22,12 @@
                 el.averageRating = 0;
               }
             })
+            $('.feedCardPicture').each(function(){
+              console.log($(this));
+              $(this).error(function() {
+                $(this).attr('src', 'http://www.placehold.it/250x250');
+              });
+            })
             console.log($scope.stylists);
           })
           .error(function(error){

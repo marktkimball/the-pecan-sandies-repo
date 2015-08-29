@@ -5,18 +5,18 @@
   </div>
   <div>
     <button ng-if="!stylistCheck()" id="stylistActivate">
-        <a href="/#/feed/{{userId}}">SEARCH</a>
+        <a href="/#/feed/{{userId}}"><i class="fa fa-search"></i></a>
       </button>
       <button ng-if="!activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="!active">
-        START STYLIN'
+        <i class="fa fa-scissors"></i>
       </button>
       <button ng-if="activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="active">
-         STOP STYLIN'
+         <i class="fa fa-times"></i>
         </button>
     <a href="/#/mailbox">
       <i class="fa fa-envelope-o"></i>
     </a>
-    <a href="/#/account/blah">
+    <a href="/#/account/{{userId}}">
       <i class="fa fa-user"></i>
     </a>
   </div>
