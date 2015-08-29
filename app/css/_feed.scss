@@ -19,11 +19,11 @@
       .feedOptionsContent {
         height: 100%;
         width: 100%;
-        @include flexbox(row, center, center);
         text-align: center;
         padding: 75px 0 0;
         height: 300px;
         background-color: $c2;
+        @include flexbox(row, center, center);
 
         .feedOptionsSkills {
           height: 25%;

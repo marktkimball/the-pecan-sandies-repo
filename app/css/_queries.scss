@@ -413,9 +413,61 @@
   }
 }
 
+@media screen and (max-width: 950px) {
+  .feedWrap {
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+          padding: 10px 0;
+          height: 450px;
+          @include flexbox(column, flex-start, center);
+
+          .feedOptionsSkills {
+            height: 20%;
+          }
+
+          .feedOptionsSort {
+            width: 100%;
+            height: 40%;
+
+            > div {
+              width: 35%;
+            }
+          }
+
+          .feedOptionsFilter {
+            width: 100%;
+            height: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 850px) {
   .feedWrap {
-    width: 100%;
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+
+          .feedOptionsSkills {
+          }
+
+          .feedOptionsSort {
+            width: 100%;
+
+            > div {
+              width: 50%;
+            }
+          }
+
+          .feedOptionsFilter {
+            width: 100%;
+          }
+        }
+      }
+    }
 
     .feedList {
       .feedCard {
@@ -484,6 +536,30 @@
 @media screen and (max-width: 650px) {
   .feedWrap {
     width: 95%;
+
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+
+          .feedOptionsSkills {
+            @include flexbox(row, space-around, center);
+
+            .feedOptionsSkillBlock {
+              .circles {
+                margin: 0;
+              }
+            }
+          }
+
+          .feedOptionsSort {
+            > div {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+
     .feedList {
       .feedCard {
         width: 95%;
@@ -492,9 +568,22 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
   .feedWrap {
     width: 100%;
+
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+          .feedOptionsSort {
+            > div {
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+
     .feedList {
       .feedCard {
         width: 98%;

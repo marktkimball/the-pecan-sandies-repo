@@ -625,6 +625,10 @@ nav {
     .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent {
       height: 100%;
       width: 100%;
+      text-align: center;
+      padding: 75px 0 0;
+      height: 300px;
+      background-color: #84C3C8;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -644,11 +648,7 @@ nav {
       align-items: center;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      text-align: center;
-      padding: 75px 0 0;
-      height: 300px;
-      background-color: #84C3C8; }
+      flex-wrap: wrap; }
       .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills {
         height: 25%;
         width: 100%;
@@ -1597,6 +1597,7 @@ nav {
         text-align: left;
         margin-bottom: 10px; }
         .formWrap form .formName > h2 > span,
+        .formWrap form .formNumber > h2 > span,
         .formWrap form .formImage > h2 > span,
         .formWrap form .formAbout > h2 > span {
           font-size: 0.75rem; }
@@ -2580,11 +2581,49 @@ footer {
 @media screen and (max-width: 1000px) {
   .feedWrap {
     width: 95%; } }
+@media screen and (max-width: 950px) {
+  .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent {
+    padding: 10px 0;
+    height: 450px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills {
+      height: 20%; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort {
+      width: 100%;
+      height: 40%; }
+      .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div {
+        width: 35%; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter {
+      width: 100%;
+      height: 40%; } }
 @media screen and (max-width: 850px) {
-  .feedWrap {
+  .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort {
     width: 100%; }
-    .feedWrap .feedList .feedCard {
-      width: 99%; } }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div {
+      width: 50%; }
+  .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter {
+    width: 100%; }
+  .feedWrap .feedList .feedCard {
+    width: 99%; } }
 @media screen and (max-width: 800px) {
   .feedWrap .feedOptions .feedOptionsDropdown {
     height: 32.5px; }
@@ -2639,11 +2678,38 @@ footer {
 @media screen and (max-width: 650px) {
   .feedWrap {
     width: 95%; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: space-around;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: space-around;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills .feedOptionsSkillBlock .circles {
+        margin: 0; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div {
+      width: 50%; }
     .feedWrap .feedList .feedCard {
       width: 95%; } }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 550px) {
   .feedWrap {
     width: 100%; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div {
+      width: 75%; }
     .feedWrap .feedList .feedCard {
       width: 98%; } }
 @media screen and (max-width: 450px) {
