@@ -16,7 +16,7 @@ var userSchema = new mongoose.Schema({
 
   name: { type: String, default: '' },
   about: { type: String, default: ''},
-  location: { type: String, default: '' },
+  location: { type: Object, default: '' },
   skills: { type: Array, default: '' },
   number: { type: String, default: '' },
   picture: { type: String, default: '' },

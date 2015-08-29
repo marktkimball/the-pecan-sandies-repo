@@ -12,9 +12,9 @@ var secrets = require('../config/secrets');
  * Login page.
  */
 
-exports.sendnotification = function(req, res, next) {
+exports.updateStatus = function(req, res, next) {
 
-  }
+}
 
 exports.editaccount = function(req, res, next) {
 
