@@ -11,7 +11,7 @@
   > .row {
     > .panel {
       height: 600px;
-      width: 400px;
+      width: 450px;
       min-height: 600px;
       min-width: 400px;
       border: 10px solid $c1;
@@ -80,7 +80,7 @@
           }
         }
 
-        > .signupBlock {
+        > .signupLinkBlock {
           height: 30%;
           font-size: 0.85rem;
           @include flexbox(row, center, center);
@@ -93,13 +93,14 @@
               color: $c3;
               border-top: 2px solid white;
               border-bottom: 2px solid $c3;
-              padding: 1px 0;
+              border-radius: 2.5%;
+              padding: 2.5px 5px;
               @include transition;
 
               &:hover {
                 text-decoration: none;
-                color: $c4;
-                border-bottom-color: $c4;
+                background-color: $c3;
+                color: white;
               }
             }
           }
