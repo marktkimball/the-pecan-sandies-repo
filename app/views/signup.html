@@ -19,11 +19,11 @@
             </div>
             <div>
               <div>
-                <input type="radio" name="signupType" id="signupStylist">
+                <input type="radio" name="signupType" id="signupStylist" ng-value="true" ng-model="userInfo.stylist">
                 <label for="signupStylist">Stylist</label>
               </div>
               <div>
-                <input type="radio" name="signupType" id="signupModel">
+                <input type="radio" name="signupType" id="signupModel" ng-value="false" ng-model="userInfo.stylist">
                 <label for="signupModel">Model</label>
               </div>
             </div>

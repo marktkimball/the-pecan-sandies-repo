@@ -23,7 +23,7 @@ var userSchema = new mongoose.Schema({
   availabilityStart: { type: String, default: '' },
   availabilityEnd: { type: String, default: '' },
   notifications: { type: Array, default: '' },
-  // stylist: {type: Boolean },
+  stylist: {type: Boolean },
   active: {type: Boolean },
   cardInfo: {type: Object, default: '' },
 

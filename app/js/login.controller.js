@@ -9,7 +9,8 @@
         event.preventDefault;
         var email = $scope.userInfo.email;
         var password = $scope.userInfo.password;
-        console.log("UserInfo: ", email, password);
+        var stylist = $scope.userInfo.stylist;
+        console.log("UserInfo: ", email, password, stylist);
       };
 
       $scope.signup = function(event){
