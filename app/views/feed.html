@@ -268,21 +268,22 @@
     <div class="feedCard" ng-repeat="card in stylists | filter:filter">
       <div class="feedCardInfo">
         <div class="feedCardImage">
-          <img src="http://www.placehold.it/150x150">
+          <img src="{{card.picture}}">
         </div>
         <div class="feedCardRating">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+          <p ng-if="card.averageRating == 0">Unrated</p>
+          <i ng-if ="card.averageRating >= 1" class="fa fa-star"></i>
+          <i ng-if ="card.averageRating >= 2" class="fa fa-star"></i>
+          <i ng-if ="card.averageRating >= 3" class="fa fa-star"></i>
+          <i ng-if ="card.averageRating >= 4" class="fa fa-star"></i>
+          <i ng-if ="card.averageRating >= 5" class="fa fa-star"></i>
         </div>
       </div>
       <div class="feedCardSkills">
         <div class="feedCardName">
-          <h1>Amy Gardener</h1>
+          <h1 ng-data="{{card._id}}">{{card.name}}</h1>
         </div>
-        <div class="feedCardSkill">
+        <div ng-if="card.skills[0] == 'hair' || card.skills[1] == 'hair' || card.skills[2] == 'hair'" class="feedCardSkill">
           <div class="feedCardSkillIcon">
             <div class="circles">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -365,7 +366,7 @@
             $12.50
           </div>
         </div>
-        <div class="feedCardSkill">
+        <div ng-if="card.skills[0] == 'nail' || card.skills[1] == 'nail' || card.skills[2] == 'nail'" class="feedCardSkill">
           <div class="feedCardSkillIcon">
             <div class="circles">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -433,7 +434,7 @@
             $15.00
           </div>
         </div>
-        <div class="feedCardSkill">
+        <div ng-if="card.skills[0] == 'makeup' || card.skills[1] == 'makeup' || card.skills[2] == 'makeup'" class="feedCardSkill">
           <div class="feedCardSkillIcon">
             <div class="circles">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -515,7 +516,7 @@
         </div>
       </div>
       <div class="feedCardBook">
-        <button id="feedCardBookButton" ng-click="modalToggle()">BOOK</button>
+        <button id="feedCardBookButton" ng-click="createModal(card)">BOOK</button>
       </div>
     </div>
   </div>
@@ -528,7 +529,7 @@
     <div class="modalContent">
       <h1>New Appointment Request</h1>
       <div class="modalDetails">
-        <h1>Amy Gardener</h1>
+        <h1>{{modalName}}</h1>
         <div class="rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
