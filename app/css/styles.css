@@ -867,6 +867,7 @@ IMPORTS
           height: 100%;
           width: 100%;
           border: 0;
+          border-radius: 10px;
           background-color: #42929D;
           color: white;
           font-size: 1.75rem;
