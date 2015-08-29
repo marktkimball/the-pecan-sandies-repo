@@ -10,6 +10,7 @@
         var email = $scope.userInfo.email;
         var password = $scope.userInfo.password;
         console.log("UserInfo: ", email, password);
+        LoginService.login(userInfo);
       };
 
       $scope.signup = function(event){
