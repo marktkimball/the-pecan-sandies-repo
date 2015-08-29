@@ -49,17 +49,23 @@
             function daysCheck(){
               if($scope.availability[0] === 'sunday' || $scope.availability[1] === 'sunday' || $scope.availability[2] === 'sunday' || $scope.availability[3] === 'sunday' || $scope.availability[4] === 'sunday' || $scope.availability[5] === 'sunday' || $scope.availability[6] === 'sunday'){
                 $('.sunday').addClass('dateActive');
-              }else if($scope.availability[0] === 'monday' || $scope.availability[1] === 'monday' || $scope.availability[2] === 'monday' || $scope.availability[3] === 'monday' || $scope.availability[4] === 'monday' || $scope.availability[5] === 'monday' || $scope.availability[6] === 'monday'){
+              }
+              if($scope.availability[0] === 'monday' || $scope.availability[1] === 'monday' || $scope.availability[2] === 'monday' || $scope.availability[3] === 'monday' || $scope.availability[4] === 'monday' || $scope.availability[5] === 'monday' || $scope.availability[6] === 'monday'){
                 $('.monday').addClass('dateActive');
-              }else if($scope.availability[0] === 'tuesday' || $scope.availability[1] === 'tuesday' || $scope.availability[2] === 'tuesday' || $scope.availability[3] === 'tuesday' || $scope.availability[4] === 'tuesday' || $scope.availability[5] === 'tuesday' || $scope.availability[6] === 'tuesday'){
+              }
+              if($scope.availability[0] === 'tuesday' || $scope.availability[1] === 'tuesday' || $scope.availability[2] === 'tuesday' || $scope.availability[3] === 'tuesday' || $scope.availability[4] === 'tuesday' || $scope.availability[5] === 'tuesday' || $scope.availability[6] === 'tuesday'){
                 $('.tuesday').addClass('dateActive');
-              }else if($scope.availability[0] === 'wednesday' || $scope.availability[1] === 'wednesday' || $scope.availability[2] === 'wednesday' || $scope.availability[3] === 'wednesday' || $scope.availability[4] === 'wednesday' || $scope.availability[5] === 'wednesday' || $scope.availability[6] === 'wednesday'){
+              }
+              if($scope.availability[0] === 'wednesday' || $scope.availability[1] === 'wednesday' || $scope.availability[2] === 'wednesday' || $scope.availability[3] === 'wednesday' || $scope.availability[4] === 'wednesday' || $scope.availability[5] === 'wednesday' || $scope.availability[6] === 'wednesday'){
                 $('.wednesday').addClass('dateActive');
-              }else if($scope.availability[0] === 'thursday' || $scope.availability[1] === 'thursday' || $scope.availability[2] === 'thursday' || $scope.availability[3] === 'thursday' || $scope.availability[4] === 'thursday' || $scope.availability[5] === 'thursday' || $scope.availability[6] === 'thursday'){
+              }
+              if($scope.availability[0] === 'thursday' || $scope.availability[1] === 'thursday' || $scope.availability[2] === 'thursday' || $scope.availability[3] === 'thursday' || $scope.availability[4] === 'thursday' || $scope.availability[5] === 'thursday' || $scope.availability[6] === 'thursday'){
                 $('.thursday').addClass('dateActive');
-              }else if($scope.availability[0] === 'friday' || $scope.availability[1] === 'friday' || $scope.availability[2] === 'friday' || $scope.availability[3] === 'friday' || $scope.availability[4] === 'friday' || $scope.availability[5] === 'friday' || $scope.availability[6] === 'friday'){
+              }
+              if($scope.availability[0] === 'friday' || $scope.availability[1] === 'friday' || $scope.availability[2] === 'friday' || $scope.availability[3] === 'friday' || $scope.availability[4] === 'friday' || $scope.availability[5] === 'friday' || $scope.availability[6] === 'friday'){
                 $('.friday').addClass('dateActive');
-              }else if($scope.availability[0] === 'saturday' || $scope.availability[1] === 'saturday' || $scope.availability[2] === 'saturday' || $scope.availability[3] === 'saturday' || $scope.availability[4] === 'saturday' || $scope.availability[5] === 'saturday' || $scope.availability[6] === 'saturday'){
+              }
+              if($scope.availability[0] === 'saturday' || $scope.availability[1] === 'saturday' || $scope.availability[2] === 'saturday' || $scope.availability[3] === 'saturday' || $scope.availability[4] === 'saturday' || $scope.availability[5] === 'saturday' || $scope.availability[6] === 'saturday'){
                 $('.saturday').addClass('dateActive');
               }
             };
