@@ -3,9 +3,17 @@
   angular
     .module('beaut')
     .controller('AccountController', function($scope, $route, $routeParams, $rootScope, $location, AccountService){
-
         AccountService.getUsers().success(function(data){
 
+        $('#userProfileImage').error(function() {
+          $('#userProfileImage').attr('src', 'http://www.placehold.it/250x250');
+        });
+
+        $('.profilePicture img').error(function() {
+          $('.profilePicture img').attr('src', 'http://www.placehold.it/250x250');
+        });
+
+        AccountService.getUsers().success(function(data){
             var routeId = $routeParams.Id;
             $scope.userId = routeId;
             console.log(routeId);
