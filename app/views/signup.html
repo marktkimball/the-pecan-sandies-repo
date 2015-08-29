@@ -1,7 +1,7 @@
-<div class="container signupContainer">
+<div class="container loginContainer">
   <div class="row">
     <div class="center-form panel">
-      <h1 class="text-center signupTitle">Beaut</h1>
+      <h1 class="text-center loginTitle">Beaut</h1>
       <div class="panel-body">
         <div class="signupBlock">
           <form id="loginForm" class="signupForm">
@@ -18,7 +18,17 @@
               <input type="password" name="signupPasswordConfirm" id="signupPasswordConfirm" placeholder="Confirm Password" ng-model="userInfo.confirmPassword">
             </div>
             <div>
-              <input type="submit" name="signupSubmit" id="signupSubmit" value="REGISTER" ng-click="signup(userInfo)">
+              <div>
+                <input type="radio" name="signupType" id="signupStylist">
+                <label for="signupStylist">Stylist</label>
+              </div>
+              <div>
+                <input type="radio" name="signupType" id="signupModel">
+                <label for="signupModel">Model</label>
+              </div>
+            </div>
+            <div>
+              <input type="submit" name="signupSubmit" id="signupSubmit" value="REGISTER">
             </div>
           </form>
         </div>
