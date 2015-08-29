@@ -91,7 +91,11 @@
             $scope.active = true;
             navigator.geolocation.getCurrentPosition(GetLocation);
             function GetLocation(location) {
-              console.log("LOCAL: ", location);
+              var userLocation ={};
+              userLocation.latitude = location.coords.latitude;
+              userLocation.longitude = location.coords.longitude;
+              userLocation._id = $routeParams.Id;
+              console.log("LOCAL: ", userLocation);
             }
           }
         }
