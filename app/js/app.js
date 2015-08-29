@@ -14,11 +14,11 @@
         })
         .when('/login', {
           templateUrl: 'views/login.html',
-          controller: 'MainController',
+          controller: 'LoginController',
         })
         .when('/signup', {
           templateUrl: 'views/signup.html',
-          controller: 'MainController',
+          controller: 'LoginController',
         })
         .when('/404', {
           templateUrl: 'views/404.html',
