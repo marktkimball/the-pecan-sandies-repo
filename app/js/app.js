@@ -19,6 +19,10 @@
           templateUrl: 'views/form.html',
           controller: 'LoginController'
         })
+        .when('/modelform/:Id', {
+          templateUrl: 'views/modelForm.html',
+          controller: 'LoginController'
+        })
         .when('/signup', {
           templateUrl: 'views/signup.html',
           controller: 'LoginController'
