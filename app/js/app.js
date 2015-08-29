@@ -31,7 +31,7 @@
           templateUrl: 'views/home.html',
           controller: 'MainController'
         })
-        .when('/mailbox', {
+        .when('/mailbox/:Id', {
           templateUrl: 'views/mailbox.html',
           controller: 'MainController'
         })
@@ -39,7 +39,7 @@
           templateUrl: 'views/account.html',
           controller: 'AccountController'
         })
-        .when('/feed', {
+        .when('/feed/:Id', {
           templateUrl: 'views/feed.html',
           controller: 'MainController'
         })
