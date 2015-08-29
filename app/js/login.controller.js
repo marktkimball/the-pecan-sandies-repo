@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('beaut')
-    .controller('LoginController', function($scope, $route, $location, LoginService){
+    .controller('LoginController', function($scope, $route, $routeParams, $location, LoginService){
       $scope.userInfo = {};
       $scope.userDays = [];
       $scope.userSkills = [];
@@ -27,8 +27,17 @@
       $scope.signup = function(event){
         event.preventDefault;
         var userInfo = $scope.userInfo;
-        console.log("UserInfo: ", userInfo);
-        LoginService.signup(userInfo);
+        LoginService.signup(userInfo)
+        .success(function(data){
+          // console.log("SignUp: ", userInfo);
+          var num = data.length - 1
+          $scope.userInfo = data[num];
+          console.log($scope.userInfo);
+          $location.path('/form/' + data[num]._id);
+        })
+        .error(function(error){
+          // console.log("Signup error: ", error);
+        });
       }
 
       $scope.selectDay = function(day, event) {
@@ -61,11 +70,13 @@
       }
 
       $scope.submitForm = function(event){
-        var userInfo = $scope.userInfo;
-        userInfo.skills = $scope.userSkills;
-        userInfo.availability = $scope.userDays;
-        LoginService.editAccount(userInfo).success(function(data){
-          $location.path('/account/' + data._id);
+        var routeId = $routeParams.Id;
+        $scope.userInfo._id = routeId;
+        $scope.userInfo.skills = $scope.userSkills;
+        $scope.userInfo.availability = $scope.userDays;
+        console.log($scope.userInfo);
+        LoginService.editAccount($scope.userInfo).success(function(data){
+           $location.path('/account/' + data._id);
         });
       }
 

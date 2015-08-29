@@ -6,6 +6,42 @@ var passport = require('passport');
 var User = require('../models/User');
 var secrets = require('../config/secrets');
 
+
+/**
+ * PUT /editaccount
+ * Login page.
+ */
+
+exports.sendnotification = function(req, res, next) {
+
+  }
+
+exports.editaccount = function(req, res, next) {
+
+  User.find({_id: req.body._id}, function(err, user) {
+
+    console.log('found user', user[0]);
+    console.log('I am the body', req.body);
+
+    user[0].name = req.body.name;
+    user[0].picture = req.body.picture;
+    user[0].about = req.body.about;
+    user[0].availability = req.body.availability;
+    user[0].skills = req.body.skills;
+
+    console.log('updated user', user[0]);
+
+    user[0].save(function(err) {
+      if(err) throw err;
+        console.log('account info changed', user[0]);
+      })
+
+    res.send(user[0]);
+
+  });
+
+};
+
 /**
  * GET /login
  * Login page.
