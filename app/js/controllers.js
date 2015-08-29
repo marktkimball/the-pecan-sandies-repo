@@ -27,5 +27,11 @@
           $('.dropdownCog').removeClass('dropdownToggled');
         }, 200)
       }
+
+      $scope.modalToggle = function(response){
+        $('.modalBackground').toggleClass('behind');
+        
+      };
+
     })
 })();
