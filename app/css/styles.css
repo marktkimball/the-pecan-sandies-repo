@@ -396,54 +396,7 @@ IMPORTS
 /**************************
   FEED
 **************************/
-.feedContainer .row .col-lg-6 {
-  margin-bottom: 20px; }
-  .feedContainer .row .col-lg-6 .individualStylist {
-    display: flex;
-    height: 200px;
-    width: 100%;
-    border: solid 1px #767877;
-    padding: 15px; }
-    .feedContainer .row .col-lg-6 .individualStylist .profileImage {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      margin-left: 15px; }
-      .feedContainer .row .col-lg-6 .individualStylist .profileImage img {
-        border-radius: 100%;
-        max-height: 200px; }
-    .feedContainer .row .col-lg-6 .individualStylist .infoBlock {
-      flex: 3;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around; }
-      .feedContainer .row .col-lg-6 .individualStylist .infoBlock .circle {
-        background-color: #F8D9D6;
-        border-radius: 100%;
-        height: 75px;
-        width: 75px;
-        margin: auto; }
-      .feedContainer .row .col-lg-6 .individualStylist .infoBlock p {
-        text-align: center; }
-      .feedContainer .row .col-lg-6 .individualStylist .infoBlock input {
-        width: 100%;
-        color: white;
-        background-color: #42929D;
-        border-radius: 2.5%;
-        border: none;
-        text-align: center;
-        padding: 10px 0;
-        -webkit-transition: all .25s ease;
-        transition: all .25s ease; }
-        .feedContainer .row .col-lg-6 .individualStylist .infoBlock input:hover {
-          background-color: #84C3C8; }
-
-.headerWrap {
-  height: 50px;
-  width: 100%;
-  background-color: #42929D; }
-
-.contentWrap {
+.feedWrap {
   width: 65%;
   height: auto;
   min-height: 1000px;
@@ -452,7 +405,489 @@ IMPORTS
   background: white;
   border-left: 5px solid #F8D9D6;
   border-right: 5px solid #F8D9D6; }
-  .contentWrap .rating {
+  .feedWrap .feedOptions .feedOptionsContentWrapper {
+    display: none; }
+    .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent {
+      height: 100%;
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 75px 0 0;
+      height: 300px;
+      background-color: #84C3C8; }
+      .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills {
+        height: 25%;
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills .feedOptionsSkillBlock .circles {
+          margin: 0 12.5px;
+          cursor: pointer;
+          width: 75px;
+          height: 75px;
+          background-color: #42929D;
+          border-radius: 50%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-transition: all .25s ease;
+          transition: all .25s ease; }
+          .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills .feedOptionsSkillBlock .circles:hover {
+            background-color: #878787; }
+            .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills .feedOptionsSkillBlock .circles:hover svg {
+              fill: lightgray; }
+          .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSkills .feedOptionsSkillBlock .circles svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+      .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort {
+        height: 75%;
+        width: 50%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div {
+          height: 80%;
+          width: 60%;
+          margin: 0 auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div > div {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+            .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div > div > div > * {
+              padding: 0;
+              margin: 0; }
+            .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div > div > div:first-of-type {
+              width: 20%; }
+              .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div > div > div:first-of-type > input {
+                font-size: 1.5rem; }
+            .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div > div > div:last-of-type {
+              width: 80%; }
+              .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsSort > div > div > div:last-of-type > label {
+                font-size: 1rem; }
+      .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter {
+        width: 50%;
+        height: 75%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter > div {
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter > div > label {
+            font-size: 1.1rem; }
+          .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter > div > input {
+            text-align: center;
+            font-size: 1rem;
+            border: 5px solid #F8D9D6;
+            padding: 2.5px 5px;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+            .feedWrap .feedOptions .feedOptionsContentWrapper .feedOptionsContent .feedOptionsFilter > div > input:focus {
+              outline: 0;
+              border-color: #42929D; }
+  .feedWrap .feedOptions .feedOptionsDropdown {
+    position: relative;
+    height: 75px;
+    background: #84C3C8;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .feedWrap .feedOptions .feedOptionsDropdown .dropdownIcon {
+      height: 158.391px;
+      width: 158.391px;
+      position: relative;
+      top: 0px;
+      background-color: #84C3C8;
+      border-radius: 50%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .feedWrap .feedOptions .feedOptionsDropdown .dropdownIcon i {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+        position: relative;
+        top: 32.5%;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease; }
+        .feedWrap .feedOptions .feedOptionsDropdown .dropdownIcon i.dropdownToggled {
+          transform: rotate(-180deg); }
+  .feedWrap .feedList {
+    margin-top: 50px;
+    padding-top: 25px;
+    height: 1000px;
+    overflow: scroll; }
+    .feedWrap .feedList .feedCard {
+      margin: 0 auto;
+      width: 95%;
+      height: 200px;
+      margin-bottom: 25px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .feedWrap .feedList .feedCard .feedCardInfo {
+        width: 20%;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: space-around;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: space-around;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .feedWrap .feedList .feedCard .feedCardInfo .feedCardImage img {
+          border-radius: 50%; }
+        .feedWrap .feedList .feedCard .feedCardInfo .feedCardRating {
+          font-size: 1rem;
+          color: gold; }
+      .feedWrap .feedList .feedCard .feedCardSkills {
+        height: 100%;
+        width: 60%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .feedWrap .feedList .feedCard .feedCardSkills .feedCardName {
+          width: 100%;
+          height: 30%;
+          color: #42929D;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+        .feedWrap .feedList .feedCard .feedCardSkills .feedCardSkill {
+          height: 70%;
+          width: 33.33%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .feedWrap .feedList .feedCard .feedCardSkills .feedCardSkill .feedCardSkillIcon {
+            text-align: center; }
+            .feedWrap .feedList .feedCard .feedCardSkills .feedCardSkill .feedCardSkillIcon .circles {
+              margin: 0 auto;
+              background-color: #42929D;
+              width: 75px;
+              height: 75px;
+              border-radius: 50%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+              flex-direction: row;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+              .feedWrap .feedList .feedCard .feedCardSkills .feedCardSkill .feedCardSkillIcon .circles svg {
+                height: 50px;
+                width: 50px;
+                fill: white; }
+          .feedWrap .feedList .feedCard .feedCardSkills .feedCardSkill .feedCardSkillPrice {
+            font-size: 1rem;
+            color: #42929D; }
+      .feedWrap .feedList .feedCard .feedCardBook {
+        width: 20%;
+        height: 100%; }
+        .feedWrap .feedList .feedCard .feedCardBook > button {
+          height: 100%;
+          width: 100%;
+          border: 0;
+          background-color: #42929D;
+          color: white;
+          font-size: 1.75rem;
+          font-weight: 300;
+          -webkit-transition: all .25s ease;
+          transition: all .25s ease; }
+          .feedWrap .feedList .feedCard .feedCardBook > button:hover {
+            background-color: #84C3C8; }
+          .feedWrap .feedList .feedCard .feedCardBook > button:focus {
+            outline: 0; }
+
+.accountWrap {
+  width: 65%;
+  height: auto;
+  min-height: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-left: 5px solid #F8D9D6;
+  border-right: 5px solid #F8D9D6; }
+  .accountWrap .rating {
     padding: 100px 0 50px;
     width: 100%;
     height: auto;
@@ -477,10 +912,10 @@ IMPORTS
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .contentWrap .rating i {
+    .accountWrap .rating i {
       color: gold;
       margin: 0 6.25px; }
-  .contentWrap .skillsWrap {
+  .accountWrap .skillsWrap {
     margin: 0 auto;
     width: 75%;
     height: 100%;
@@ -504,7 +939,7 @@ IMPORTS
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .contentWrap .skillsWrap .skillBlock .circles {
+    .accountWrap .skillsWrap .skillBlock .circles {
       cursor: pointer;
       height: 150px;
       width: 150px;
@@ -532,38 +967,38 @@ IMPORTS
       flex-wrap: wrap;
       -webkit-transition: all .25s ease;
       transition: all .25s ease; }
-      .contentWrap .skillsWrap .skillBlock .circles > svg {
+      .accountWrap .skillsWrap .skillBlock .circles > svg {
         height: 100px;
         width: 100px;
         fill: #B6B6B6;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
-      .contentWrap .skillsWrap .skillBlock .circles:hover {
+      .accountWrap .skillsWrap .skillBlock .circles:hover {
         background-color: #84C3C8; }
-        .contentWrap .skillsWrap .skillBlock .circles:hover + .skillsPrice {
+        .accountWrap .skillsWrap .skillBlock .circles:hover + .skillsPrice {
           color: #42929D; }
-        .contentWrap .skillsWrap .skillBlock .circles:hover > svg {
+        .accountWrap .skillsWrap .skillBlock .circles:hover > svg {
           fill: white; }
-    .contentWrap .skillsWrap .skillBlock .skillsPrice {
+    .accountWrap .skillsWrap .skillBlock .skillsPrice {
       font-size: 1.1rem;
       margin-top: 12.5px;
       text-align: center;
       -webkit-transition: all .25s ease;
       transition: all .25s ease; }
-  .contentWrap .aboutWrap {
+  .accountWrap .aboutWrap {
     width: 80%;
     height: auto;
     border-bottom: 1px solid lightgray;
     margin: 0 auto;
     margin-top: 50px;
     font-size: 1rem; }
-    .contentWrap .aboutWrap h1 {
+    .accountWrap .aboutWrap h1 {
       text-align: center;
       margin-bottom: 25px;
       font-size: 1.75rem; }
-    .contentWrap .aboutWrap p {
+    .accountWrap .aboutWrap p {
       margin-bottom: 25px; }
-  .contentWrap .availability {
+  .accountWrap .availability {
     width: 80%;
     height: auto;
     margin: 25px auto 0;
@@ -587,10 +1022,10 @@ IMPORTS
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .contentWrap .availability h1 {
+    .accountWrap .availability h1 {
       font-size: 1.75rem;
       margin: 25px 0 50px; }
-    .contentWrap .availability .dates {
+    .accountWrap .availability .dates {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -615,23 +1050,23 @@ IMPORTS
       height: auto;
       font-size: 24px;
       font-weight: bold; }
-      .contentWrap .availability .dates .date {
+      .accountWrap .availability .dates .date {
         height: auto;
         width: 14.25%;
         text-align: center;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
-        .contentWrap .availability .dates .date > div:first-of-type {
+        .accountWrap .availability .dates .date > div:first-of-type {
           font-size: 1.15rem;
           margin-bottom: 12.5px;
           text-decoration: underline; }
-        .contentWrap .availability .dates .date > div:last-of-type {
+        .accountWrap .availability .dates .date > div:last-of-type {
           font-size: 0.75rem; }
-      .contentWrap .availability .dates .date:hover {
+      .accountWrap .availability .dates .date:hover {
         cursor: pointer;
         background-color: #84C3C8;
         color: white; }
-      .contentWrap .availability .dates .dateInactive {
+      .accountWrap .availability .dates .dateInactive {
         color: #B6B6B6; }
 
 /**************************
