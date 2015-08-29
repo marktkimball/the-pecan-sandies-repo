@@ -4,7 +4,6 @@
   angular
     .module('beaut', [
       'ngRoute',
-      'ngAnimate',
       'underscore'
     ])
     .config(function ($routeProvider) {

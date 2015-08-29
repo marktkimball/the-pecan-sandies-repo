@@ -108,13 +108,13 @@ ANIMATIONS
 **************************/
 
 .ng-enter {
-  -webkit-animation: fadeIn 5s both ease-in;
-  animation: fadeIn 5s both ease-in;
+  -webkit-animation: fadeIn .25s both ease-in;
+  animation: fadeIn .25s both ease-in;
   z-index: 9;
 }
 .ng-leave {
-  -webkit-animation: fadeOut 2.5s both ease-in;
-  animation: fadeOut 2.5s both ease-in;
+  -webkit-animation: fadeOut .125s both ease-in;
+  animation: fadeOut .125s both ease-in;
   z-index: 8;
 }
 
