@@ -4,10 +4,15 @@
     <span>B</span>
   </div>
   <div>
-    <button id="stylistActivate">
-      <span>START STYLIN'</span>
-      <span><i class="fa fa-scissors"></i></span>
-    </button>
+    <button ng-if="!stylistCheck()" id="stylistActivate" ng-click="">
+        SEARCH
+      </button>
+      <button ng-if="!activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="!active">
+        START STYLIN'
+      </button>
+      <button ng-if="activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="active">
+         STOP STYLIN'
+        </button>
     <a href="/#/mailbox">
       <i class="fa fa-envelope-o"></i>
     </a>
