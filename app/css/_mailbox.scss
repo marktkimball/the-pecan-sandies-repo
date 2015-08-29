@@ -1,0 +1,158 @@
+/**************************
+  MAILBOX
+**************************/
+
+.mailboxWrap {
+  width: 65%;
+  height: auto;
+  min-height: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-left: 5px solid $c1;
+  border-right: 5px solid $c1;
+
+  .mailList {
+    padding-top: 75px;
+    height: 1000px;
+    overflow: scroll;
+
+    .mail {
+      margin: 0 auto;
+      width: 95%;
+      height: 200px;
+      margin-bottom: 25px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      @include flexbox(row, center, center);
+
+      .mailInfo {
+        width: 20%;
+        height: 100%;
+        @include flexbox(column, space-around, center);
+
+        .mailImage {
+          img {
+            border-radius: 50%;
+          }
+        }
+
+        .mailRating {
+          font-size: 1rem;
+          color: gold;
+        }
+      }
+
+      .mailSkills {
+        height: 100%;
+        width: 60%;
+        @include flexbox(row, center, center);
+
+        .mailName {
+          width: 100%;
+          height: 30%;
+          color: $c3;
+          @include flexbox(row, center, center);
+        }
+
+        .mailSkill {
+          height: 70%;
+          width: 33.33%;
+          @include flexbox(column, center, center);
+
+          .mailSkillIcon {
+            text-align: center;
+
+
+            &.mailActiveSkill {
+              .circles {
+                background-color: $c3;
+              }
+
+              &+ .mailSkillPrice {
+                color: $c3;
+              }
+            }
+
+            .circles {
+              margin: 0 auto;
+              background-color: lightgray;
+              width: 75px;
+              height: 75px;
+              border-radius: 50%;
+              @include flexbox(row, center, center);
+
+              svg {
+                height: 50px;
+                width: 50px;
+                fill: white;
+              }
+            }
+          }
+
+          .mailSkillPrice {
+            font-size: 1rem;
+            color: lightgray;
+          }
+        }
+      }
+
+      .mailActions {
+        width: 20%;
+        height: 100%;
+
+        .mailTimestamp {
+          height: 15%;
+          background-color: $c3;
+          color: white;
+          @include flexbox(row, center, center);
+        }
+
+        .mailActionButtons {
+          height: 85%;
+
+          > div {
+            cursor: pointer;
+            height: 50%;
+            @include flexbox(row, center, center);
+            @include transition;
+
+            &:hover {
+              background-color: $c2;
+            }
+
+            &:first-of-type {
+              &:hover {
+                > i {
+                  color: white;
+                }
+              }
+
+              > i {
+                color: $success;
+              }
+            }
+
+            &:last-of-type {
+              &:hover {
+                > i {
+                  color: white;
+                }
+              }
+
+              > i {
+                color: $failure;
+              }
+            }
+
+            > i {
+              font-size: 1.5rem;
+              @include transition;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 /**************************
-SASS VARIABLES & MIXINS
+  SASS VARIABLES & MIXINS
 **************************/
 /**************************
 SETUP
@@ -44,7 +44,7 @@ body {
   overflow: auto; }
 
 /**************************
-ANIMATIONS
+  ANIMATIONS
 **************************/
 .ng-enter {
   -webkit-animation: fadeIn .25s both ease-in;
@@ -91,7 +91,7 @@ ANIMATIONS
   100% {
     height: 0%; } }
 /**************************
-IMPORTS
+  IMPORTS
 **************************/
 /**************************
   LOGIN
@@ -1834,5 +1834,292 @@ nav {
           outline: 0; }
         .formWrap form .formSubmit input:hover {
           background-color: #84C3C8; }
+
+/**************************
+  MAILBOX
+**************************/
+.mailboxWrap {
+  width: 65%;
+  height: auto;
+  min-height: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-left: 5px solid #F8D9D6;
+  border-right: 5px solid #F8D9D6; }
+  .mailboxWrap .mailList {
+    padding-top: 75px;
+    height: 1000px;
+    overflow: scroll; }
+    .mailboxWrap .mailList .mail {
+      margin: 0 auto;
+      width: 95%;
+      height: 200px;
+      margin-bottom: 25px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .mailboxWrap .mailList .mail .mailInfo {
+        width: 20%;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: space-around;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: space-around;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .mailboxWrap .mailList .mail .mailInfo .mailImage img {
+          border-radius: 50%; }
+        .mailboxWrap .mailList .mail .mailInfo .mailRating {
+          font-size: 1rem;
+          color: gold; }
+      .mailboxWrap .mailList .mail .mailSkills {
+        height: 100%;
+        width: 60%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .mailboxWrap .mailList .mail .mailSkills .mailName {
+          width: 100%;
+          height: 30%;
+          color: #42929D;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+        .mailboxWrap .mailList .mail .mailSkills .mailSkill {
+          height: 70%;
+          width: 33.33%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .mailboxWrap .mailList .mail .mailSkills .mailSkill .mailSkillIcon {
+            text-align: center; }
+            .mailboxWrap .mailList .mail .mailSkills .mailSkill .mailSkillIcon.mailActiveSkill .circles {
+              background-color: #42929D; }
+            .mailboxWrap .mailList .mail .mailSkills .mailSkill .mailSkillIcon.mailActiveSkill + .mailSkillPrice {
+              color: #42929D; }
+            .mailboxWrap .mailList .mail .mailSkills .mailSkill .mailSkillIcon .circles {
+              margin: 0 auto;
+              background-color: lightgray;
+              width: 75px;
+              height: 75px;
+              border-radius: 50%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+              flex-direction: row;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+              .mailboxWrap .mailList .mail .mailSkills .mailSkill .mailSkillIcon .circles svg {
+                height: 50px;
+                width: 50px;
+                fill: white; }
+          .mailboxWrap .mailList .mail .mailSkills .mailSkill .mailSkillPrice {
+            font-size: 1rem;
+            color: lightgray; }
+      .mailboxWrap .mailList .mail .mailActions {
+        width: 20%;
+        height: 100%; }
+        .mailboxWrap .mailList .mail .mailActions .mailTimestamp {
+          height: 15%;
+          background-color: #42929D;
+          color: white;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+        .mailboxWrap .mailList .mail .mailActions .mailActionButtons {
+          height: 85%; }
+          .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div {
+            cursor: pointer;
+            height: 50%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+            .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div:hover {
+              background-color: #84C3C8; }
+            .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div:first-of-type:hover > i {
+              color: white; }
+            .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div:first-of-type > i {
+              color: #4CAF50; }
+            .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div:last-of-type:hover > i {
+              color: white; }
+            .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div:last-of-type > i {
+              color: #F44336; }
+            .mailboxWrap .mailList .mail .mailActions .mailActionButtons > div > i {
+              font-size: 1.5rem;
+              -webkit-transition: all .25s ease;
+              transition: all .25s ease; }
+
+/**************************
+  FOOTER
+**************************/
+footer {
+  height: 200px;
+  margin-top: 50px;
+  background-color: #42929D;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  footer > div:first-of-type {
+    color: white;
+    font-size: 0.8rem; }
+  footer > div:last-of-type {
+    color: white; }
+    footer > div:last-of-type > a {
+      color: white;
+      text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */

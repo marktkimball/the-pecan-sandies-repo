@@ -1,0 +1,25 @@
+/**************************
+  FOOTER
+**************************/
+
+footer {
+  height: 200px;
+  margin-top: 50px;
+  background-color: $c3;
+  text-align: center;
+  @include flexbox(row, center, center);
+
+  > div:first-of-type {
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  > div:last-of-type {
+    color: white;
+
+    > a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
