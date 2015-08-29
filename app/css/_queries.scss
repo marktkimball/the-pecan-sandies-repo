@@ -1,0 +1,778 @@
+/**************************
+  NAVBAR QUERIES
+**************************/
+
+@media screen and (max-width: 1000px) {
+  nav {
+    > div:first-of-type {
+      > span:first-of-type {
+        display: none;
+      }
+      > span:last-of-type {
+        display: block;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      width: 80%;
+      @include flexbox(row, space-around, center);
+
+      > button {
+        width: 30%;
+
+        > span:first-of-type {
+          display: none;
+        }
+
+        > span:last-of-type {
+          display: block;
+        }
+      }
+
+      > a {
+        @include flexbox(row, center, center);
+        width: 30%;
+      }
+    }
+
+    > div:nth-of-type(3) {
+      display: none;
+    }
+
+    > div:nth-of-type(4) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    > div:nth-of-type(2) {
+      width: 80%;
+      @include flexbox(row, space-around, center);
+
+      > button {
+        width: 30%;
+        > span:first-of-type {
+          display: none;
+        }
+
+        > span:last-of-type {
+          display: block;
+        }
+      }
+
+      > a {
+        @include flexbox(row, center, center);
+        width: 30%;
+      }
+    }
+
+    > div:nth-of-type(3) {
+      display: none;
+    }
+
+    > div:nth-of-type(4) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    height: 100px;
+
+    > div:nth-of-type(1) {
+      width: 50%;
+      height: 50%;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
+
+      > span:first-of-type {
+        display: block;
+      }
+
+      > span:last-of-type {
+        display: none;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      width: 100%;
+      height: 50%;
+      -webkit-box-ordinal-group: 4;
+      -webkit-order: 3;
+      -ms-flex-order: 3;
+      order: 3;
+      text-align: center;
+
+      > button {
+        width: 30%;
+      }
+    }
+
+    > div:nth-of-type(4) {
+      width: 66.66%;
+      height: 50%;
+      -webkit-box-ordinal-group: 5;
+      -webkit-order: 4;
+      -ms-flex-order: 4;
+      order: 4;
+
+      > a {
+        width: 45%;
+      }
+    }
+
+    > div:nth-of-type(5) {
+      width: 50%;
+      height: 50%;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2;
+    }
+  }
+}
+
+/**************************
+  LOGIN QUERIES
+**************************/
+
+@media screen and (max-width: 450px) {
+  .loginContainer {
+    padding: 0;
+    > .row {
+      width: 100%;
+      margin: 0;
+      > .panel {
+        min-height: 0;
+        min-width: 0;
+        width: 100%;
+
+        > .panel-body {
+          .loginBlock {
+            .loginForm {
+              > div {
+                width: 95%;
+
+                &:first-of-type {
+                  input {
+                    font-size: 0.75rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .signupLinkBlock {
+          > div {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************************
+  STYLIST SIGNUP QUERIES
+**************************/
+
+@media screen and (max-width: 1250px) {
+  .formPageWrap {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .formPageWrap {
+    width: 90%;
+  }
+
+  .formWrap {
+    form {
+      .formName,
+      .formImage,
+      .formAbout {
+        width: 90%;
+      }
+
+      .formAvailability {
+        .dates {
+          @include flexbox(row, space-around, center);
+          .date {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .formPageWrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .formWrap {
+    form {
+      .formName,
+      .formImage,
+      .formAbout {
+        width: 98%;
+      }
+
+      .formSkills {
+        .radioSkills {
+          @include flexbox(column, center, center);
+
+          .radioSkill {
+            width: 100%;
+          }
+        }
+      }
+
+      .formAvailability {
+        .dates {
+          @include flexbox(row, space-around, center);
+          .date {
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .formWrap {
+    form {
+      .formAvailability {
+        .dates {
+          .date {
+            height: auto;
+            width: 95%;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************************
+  ACCOUNT QUERIES
+**************************/
+
+@media screen and (max-width: 1250px) {
+  .accountWrap {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .accountWrap {
+    width: 85%;
+
+    .availability {
+      width: 95%;
+      .dates {
+        @include flexbox(row, space-around, center);
+
+        .date {
+          border: 2.5px solid $dt;
+          width: 24%;
+          margin-bottom: 25px;
+
+          &.dateActive {
+            border-color: $c2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .accountWrap {
+    width: 95%;
+
+    .profilePicture {
+      display: block;
+
+      img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+    }
+
+    .rating {
+      padding: 0;
+      margin-bottom: 50px;
+    }
+
+    .skillsWrap {
+      width: 100%;
+    }
+
+    .aboutWrap {
+      width: 95%;
+    }
+
+    .availability {
+      .dates {
+        .date {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .accountWrap {
+    width: 100%;
+
+    .availability {
+      .dates {
+        .date {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .accountWrap {
+    width: 100%;
+
+    .skillsWrap {
+      @include flexbox(column, center, center);
+      .skillBlock {
+        margin-bottom: 25px;
+      }
+    }
+
+    .aboutWrap {
+      .aboutName {
+        @include flexbox(column, center, center);
+
+        > h1:last-of-type {
+          margin-top: 15px;
+          font-size: 1.25rem;
+          color: $c3;
+        }
+      }
+    }
+
+    .availability {
+      .dates {
+        .date {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/**************************
+  FEED QUERIES
+**************************/
+
+@media screen and (max-width: 1250px) {
+  .feedWrap {
+    width: 85%;
+
+    .feedOptions {
+      .feedOptionsDropdown {
+        > .dropdownIcon {
+          height: 75px;
+          width: 125px;
+          top: 25px;
+
+          i {
+            top: 15%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .feedWrap {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .feedWrap {
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+          padding: 10px 0;
+          height: 450px;
+          @include flexbox(column, flex-start, center);
+
+          .feedOptionsSkills {
+            height: 20%;
+          }
+
+          .feedOptionsSort {
+            width: 100%;
+            height: 40%;
+
+            > div {
+              width: 35%;
+            }
+          }
+
+          .feedOptionsFilter {
+            width: 100%;
+            height: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .feedWrap {
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+
+          .feedOptionsSkills {
+          }
+
+          .feedOptionsSort {
+            width: 100%;
+
+            > div {
+              width: 50%;
+            }
+          }
+
+          .feedOptionsFilter {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .feedList {
+      .feedCard {
+        width: 99%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .feedWrap {
+    .feedOptions {
+      .feedOptionsDropdown {
+        height: 32.5px;
+        > .dropdownIcon {
+          height: 50px;
+          width: 75px;
+          top: 12.5px;
+
+          i {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .feedWrap {
+    width: 80%;
+    .feedList {
+      .feedCard {
+        width: 95%;
+        padding: 0;
+        height: 400px;
+        @include flexbox(column, center, center);
+
+        .feedCardInfo {
+          height: 45%;
+          width: 100%;
+        }
+
+        .feedCardSkills {
+          height: 45%;
+          width: 100%;
+        }
+
+        .feedCardBook {
+          width: 100%;
+          height: 10%;
+
+          > button {
+            width: 100%;
+            font-size: 1.25rem;
+            border-radius: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .feedWrap {
+    width: 95%;
+
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+
+          .feedOptionsSkills {
+            @include flexbox(row, space-around, center);
+
+            .feedOptionsSkillBlock {
+              .circles {
+                margin: 0;
+              }
+            }
+          }
+
+          .feedOptionsSort {
+            > div {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+
+    .feedList {
+      .feedCard {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .feedWrap {
+    width: 100%;
+
+    .feedOptions {
+      .feedOptionsContentWrapper {
+        .feedOptionsContent {
+          .feedOptionsSort {
+            > div {
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+
+    .feedList {
+      .feedCard {
+        width: 98%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .feedWrap {
+    width: 100%;
+    .feedList {
+      .feedCard {
+        .feedCardSkills {
+          .feedCardName {
+            h1 {
+              font-size: 1rem;
+            }
+          }
+          .feedCardSkill {
+            .feedCardSkillIcon {
+              .circles {
+                height: 55px;
+                width: 55px;
+
+                svg {
+                  height: 35px;
+                  width: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************************
+  MAILBOX QUERIES
+**************************/
+
+@media screen and (max-width: 1250px) {
+  .mailboxWrap {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mailboxWrap {
+    width: 98%;
+
+    .mailList {
+      .mail {
+        .mailInfo {
+          .mailImage {
+            img {
+              height: 125px;
+              width: 125px;
+            }
+          }
+
+          .mailRating {
+            font-size: 0.8rem;
+          }
+        }
+
+        .mailSkills {
+          .mailSkill {
+            .mailSkillIcon {
+              .circles {
+                height: 55px;
+                width: 55px;
+
+                svg {
+                  height: 35px;
+                  width: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .mailboxWrap {
+    width: 95%;
+    .mailList {
+      .mail {
+        width: 95%;
+        padding: 0;
+        height: 400px;
+        @include flexbox(column, center, center);
+
+        .mailInfo {
+          position: relative;
+          height: 45%;
+          width: 100%;
+
+          .mobileTimestamp {
+            width: 30%;
+            text-align: center;
+            background-color: $c2;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            color: white;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+        }
+
+        .mailSkills {
+          height: 45%;
+          width: 100%;
+        }
+
+        .mailActions {
+          width: 100%;
+          height: 10%;
+
+          > .mailTimestamp {
+            display: none;
+          }
+
+          > .mailActionButtons {
+            width: 100%;
+            height: 100%;
+            @include flexbox(row, center, center);
+
+            > div {
+              height: 100%;
+              width: 50%;
+
+              &:first-of-type {
+                -webkit-box-ordinal-group: 3;
+                -webkit-order: 2;
+                -ms-flex-order: 2;
+                order: 2;
+              }
+
+              &:last-of-type {
+                -webkit-box-ordinal-group: 2;
+                -webkit-order: 1;
+                -ms-flex-order: 1;
+                order: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mailboxWrap {
+    width: 100%;
+    .mailList {
+      .mail {
+        width: 98%;
+
+        .mailSkills {
+          .mailName {
+            h1 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************************
+  FOOTER QUERIES
+**************************/
+
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 0 40px;
+
+    > div:first-of-type {
+      font-size: 0.6rem;
+    }
+  }
+}
