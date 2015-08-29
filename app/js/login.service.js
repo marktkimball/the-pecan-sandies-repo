@@ -2,22 +2,17 @@
   'use strict';
   angular
     .module('beaut')
-    .service('LoginService', function($http, $q) {
+    .service('LoginService', function($http, $q, $location) {
 
       var login = function(userInfo){
-        $http.post('/login', userInfo)
-          .success(function(){
-            // console.log("Login: ", userInfo);
-          })
-          .error(function(error){
-            console.log("Login error: ", error);
-          })
+        return $http.post('/login', userInfo);
       };
 
       var signup = function(userInfo){
         $http.post('/signup', userInfo)
           .success(function(){
             // console.log("SignUp: ", userInfo);
+            $location.path('/login');
           })
           .error(function(error){
             // console.log("Signup error: ", error);
