@@ -10,7 +10,14 @@
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
+          redirectTo: '/login'
+        })
+        .when('/login', {
           templateUrl: 'views/login.html',
+          controller: 'MainController',
+        })
+        .when('/signup', {
+          templateUrl: 'views/signup.html',
           controller: 'MainController',
         })
         .when('/404', {
