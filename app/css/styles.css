@@ -119,7 +119,7 @@ IMPORTS
   flex-wrap: wrap; }
   .loginContainer > .row > .panel {
     height: 600px;
-    width: 400px;
+    width: 450px;
     min-height: 600px;
     min-width: 400px;
     border: 10px solid #F8D9D6;
@@ -207,7 +207,7 @@ IMPORTS
               .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div > input[type=submit]:hover {
                 background-color: #42929D;
                 color: white; }
-      .loginContainer > .row > .panel > .panel-body > .signupBlock {
+      .loginContainer > .row > .panel > .panel-body > .signupLinkBlock {
         height: 30%;
         font-size: 0.85rem;
         display: -webkit-box;
@@ -230,19 +230,177 @@ IMPORTS
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-        .loginContainer > .row > .panel > .panel-body > .signupBlock > div {
+        .loginContainer > .row > .panel > .panel-body > .signupLinkBlock > div {
           text-align: center;
           color: #42929D; }
-          .loginContainer > .row > .panel > .panel-body > .signupBlock > div > a {
+          .loginContainer > .row > .panel > .panel-body > .signupLinkBlock > div > a {
             color: #42929D;
             border-top: 2px solid white;
             border-bottom: 2px solid #42929D;
-            padding: 1px 0;
+            border-radius: 2.5%;
+            padding: 2.5px 5px;
             -webkit-transition: all .25s ease;
             transition: all .25s ease; }
-            .loginContainer > .row > .panel > .panel-body > .signupBlock > div > a:hover {
+            .loginContainer > .row > .panel > .panel-body > .signupLinkBlock > div > a:hover {
               text-decoration: none;
-              color: #767877;
-              border-bottom-color: #767877; }
+              background-color: #42929D;
+              color: white; }
+
+/**************************
+  SIGNUP
+**************************/
+.signupContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: #84C3C8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .signupContainer > .row > .panel {
+    height: 600px;
+    width: 450px;
+    min-height: 600px;
+    min-width: 400px;
+    border: 10px solid #F8D9D6;
+    border-radius: 1%; }
+    .signupContainer > .row > .panel > .signupTitle {
+      height: 20%;
+      background-color: #F8D9D6;
+      font-size: 3.5rem;
+      color: #42929D;
+      font-family: "Lobster Two", cursive; }
+    .signupContainer > .row > .panel > .panel-body {
+      height: 80%;
+      max-height: 100%;
+      border-radius: 1%; }
+      .signupContainer > .row > .panel > .panel-body > .signupBlock {
+        height: 70%; }
+        .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm {
+          height: 100%;
+          width: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm > div {
+            height: 25%;
+            width: 90%;
+            font-size: 1rem;
+            color: #42929D;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+            .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm > div > i {
+              width: 20%;
+              font-size: 1.25rem; }
+            .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm > div > input {
+              width: 80%;
+              margin-top: 5px;
+              border-radius: 1%;
+              border: 3px solid #F8D9D6;
+              text-align: center;
+              padding: 2.5px; }
+              .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm > div > input:focus {
+                border-color: #42929D;
+                outline: 0; }
+            .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm > div > input[type=submit] {
+              border: none;
+              padding: 10px 0;
+              width: 100%;
+              background-color: #F8D9D6;
+              border-radius: 2.5%;
+              -webkit-transition: all .25s ease;
+              transition: all .25s ease; }
+              .signupContainer > .row > .panel > .panel-body > .signupBlock > .signupForm > div > input[type=submit]:hover {
+                background-color: #42929D;
+                color: white; }
+      .signupContainer > .row > .panel > .panel-body > .loginLinkBlock {
+        height: 30%;
+        font-size: 0.85rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .signupContainer > .row > .panel > .panel-body > .loginLinkBlock > div {
+          text-align: center;
+          color: #42929D; }
+          .signupContainer > .row > .panel > .panel-body > .loginLinkBlock > div > a {
+            color: #42929D;
+            border-top: 2px solid white;
+            border-bottom: 2px solid #42929D;
+            border-radius: 2.5%;
+            padding: 2.5px 5px;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+            .signupContainer > .row > .panel > .panel-body > .loginLinkBlock > div > a:hover {
+              text-decoration: none;
+              background-color: #42929D;
+              color: white; }
 
 /*# sourceMappingURL=styles.css.map */
