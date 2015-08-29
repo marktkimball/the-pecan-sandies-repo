@@ -1,4 +1,5 @@
-# the-pecan-sandies-repo
-the-pecan-sandies-repo repository
+# BEAUT
+by: The Pecan Sandies
+  Sam Grayson, Clayton Kinder, Mark T. Kimball
 
-BEAUT
+powered by: sahat Hacakthon-Starter (https://github.com/sahat/hackathon-starter)
