@@ -99,6 +99,10 @@ html, body {
   width: 100%;
 }
 
+body {
+  background: url('../media/cosmetology.jpg');
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -178,5 +182,6 @@ IMPORTS
 **************************/
 
 @import 'login';
+@import 'feed';
 @import 'account';
 @import 'navbar';
