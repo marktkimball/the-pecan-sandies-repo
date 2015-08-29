@@ -11,7 +11,9 @@ var secrets = require('../config/secrets');
  * Login page.
  */
 exports.getLogin = function(req, res) {
-  res.send(req.user);
+  User.find(function(err,user) {
+   res.send(user);
+ });
 };
 
 /**

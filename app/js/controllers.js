@@ -3,25 +3,24 @@
   angular
     .module('beaut')
     .controller('MainController', function($scope, $route, $http, $q, $location, $window, MainService) {
-      //
-      // var getUsers = function(){
-      //   MainService.getModels()
-      //     .success(function(data){
-      //       console.log("Models from Service: ", data);
-      //     })
-      //     .error(function(error){
-      //       console.log("Error: ", error);
-      //     })
-      //     MainService.getStylists()
-      //       .success(function(data){
-      //         console.log("Stylists from Service: ", data);
-      //       })
-      //       .error(function(error){
-      //         console.log("Error: ", error);
-      //       })
-      // };
-      //
-      // getUsers();
+
+      var getStylists = function(){
+        MainService.getStylists()
+          .success(function(data){
+            var stylists = _.filter(data, function(el){
+              if(el.stylist){
+                console.log(el);
+                return el;
+              }
+            });
+            console.log("STYLIST: ", stylists);
+          })
+          .error(function(error){
+            console.log("Error: ", error);
+          })
+        };
+
+      getStylists();
 
     })
 })();
