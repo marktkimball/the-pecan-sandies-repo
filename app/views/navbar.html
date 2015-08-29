@@ -4,8 +4,8 @@
     <span>B</span>
   </div>
   <div>
-    <button ng-if="!stylistCheck()" id="stylistActivate" ng-click="">
-        SEARCH
+    <button ng-if="!stylistCheck()" id="stylistActivate">
+        <a href="/#/feed/{{userId}}">SEARCH</a>
       </button>
       <button ng-if="!activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="!active">
         START STYLIN'

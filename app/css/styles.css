@@ -206,9 +206,15 @@ nav {
       flex-wrap: wrap;
       -webkit-transition: all .25s ease;
       transition: all .25s ease; }
+      nav > div:nth-of-type(2) > button a {
+        color: #42929D;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease; }
       nav > div:nth-of-type(2) > button:hover {
-        background-color: #84C3C8;
-        color: white; }
+        background-color: #84C3C8; }
+        nav > div:nth-of-type(2) > button:hover a {
+          color: white;
+          text-decoration: none; }
       nav > div:nth-of-type(2) > button:focus {
         outline: 0; }
       nav > div:nth-of-type(2) > button > span:last-of-type {
