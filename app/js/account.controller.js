@@ -3,7 +3,7 @@
   angular
     .module('beaut')
     .controller('AccountController', function($scope, $route, $routeParams, $rootScope, $location, AccountService){
-    
+
         AccountService.getUsers().success(function(data){
 
             var routeId = $routeParams.Id;
