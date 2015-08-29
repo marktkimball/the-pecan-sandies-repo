@@ -88,6 +88,8 @@
       }
 
       $scope.submitForm = function(userinfo, event){
+        console.log("info", userinfo);
+        $location.path('/account/' + routeId);
         var someEmpty = $('input[type=text]').filter(function(){
             return $.trim(this.value).length === 0;
         }).length > 0;
@@ -109,16 +111,17 @@
           }
           checkTimes();
 
-          if (noTimes.length > 0) {} else {
+
+            console.log("IM here");
             var routeId = $routeParams.Id;
             $scope.userInfo._id = routeId;
             $scope.userInfo.skills = $scope.userSkills;
             $scope.userInfo.availability = $scope.userDays;
             console.log($scope.userInfo);
             LoginService.editAccount($scope.userInfo).success(function(data){
-               $location.path('/account/' + data._id);
+               $location.path('/account/' + routeId);
             });
-          }
+
         }
       }
 
