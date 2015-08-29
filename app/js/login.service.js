@@ -25,7 +25,8 @@
       };
 
       return {
-        signup : signup
+        signup : signup,
+        login : login
       };
 
     });

@@ -19,6 +19,10 @@
           templateUrl: 'views/signup.html',
           controller: 'LoginController',
         })
+        .when('/feed', {
+          templateUrl: 'views/feed.html',
+          controller: 'MainController'
+        })
         .when('/404', {
           templateUrl: 'views/404.html',
           controller: 'MainController',
