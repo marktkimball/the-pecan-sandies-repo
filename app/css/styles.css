@@ -1107,8 +1107,8 @@ IMPORTS
         .modalBackground .modal .modalContent .modalDetails h1 {
           margin-bottom: 15px; }
         .modalBackground .modal .modalContent .modalDetails .rating {
-          padding: 0px 0px 25px 0px;
-          font-size: 1rem; }
+          font-size: 1rem;
+          padding: 0; }
         .modalBackground .modal .modalContent .modalDetails .acceptDecline {
           display: flex;
           margin-top: 50px; }
@@ -1129,6 +1129,38 @@ IMPORTS
             background-color: #D5A5A2; }
             .modalBackground .modal .modalContent .modalDetails .acceptDecline .decline:hover {
               background-color: #F8D9D6; }
+        .modalBackground .modal .modalContent .modalDetails .circles {
+          width: 75px;
+          height: 75px;
+          margin: auto;
+          margin-top: 25px;
+          margin-bottom: 25px;
+          background-color: #42929D;
+          border-radius: 50%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+        .modalBackground .modal .modalContent .modalDetails svg {
+          width: 50px;
+          height: 50px;
+          fill: white; }
 
 .behind {
   z-index: -100;
