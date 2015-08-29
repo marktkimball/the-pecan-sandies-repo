@@ -12,16 +12,21 @@
         $http.post('/signup', userInfo)
           .success(function(){
             // console.log("SignUp: ", userInfo);
-            $location.path('/account');
+            $location.path('/form');
           })
           .error(function(error){
             // console.log("Signup error: ", error);
           })
       };
 
+      var editAccount = function(userInfo){
+        $http.put('/editaccount', userInfo);
+      }
+
       return {
         signup : signup,
-        login : login
+        login : login,
+        editAccount : editAccount
       };
 
     });
