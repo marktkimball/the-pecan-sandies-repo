@@ -2461,6 +2461,12 @@ footer {
 @media screen and (max-width: 1000px) {
   .accountWrap {
     width: 85%; }
+    .accountWrap .profilePicture {
+      display: block; }
+      .accountWrap .profilePicture img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%; }
     .accountWrap .availability {
       width: 95%; }
       .accountWrap .availability .dates {

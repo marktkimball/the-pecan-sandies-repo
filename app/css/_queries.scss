@@ -280,6 +280,16 @@
   .accountWrap {
     width: 85%;
 
+    .profilePicture {
+      display: block;
+
+      img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
+    }
+
     .availability {
       width: 95%;
       .dates {
