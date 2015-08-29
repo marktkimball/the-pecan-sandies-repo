@@ -7,15 +7,15 @@
           <form id="loginForm" class="signupForm">
             <div>
               <i class="fa fa-user"></i>
-              <input type="text" name="signupUsername" id="signupUsername" placeholder="Username">
+              <input type="text" name="signupUsername" id="signupUsername" placeholder="Username" ng-model="userInfo.email">
             </div>
             <div>
               <i class="fa fa-key"></i>
-              <input type="password" name="signupPassword" id="signupPassword" placeholder="Password">
+              <input type="password" name="signupPassword" id="signupPassword" placeholder="Password" ng-model="userInfo.password">
             </div>
             <div>
               <i class="fa fa-key"></i>
-              <input type="password" name="signupPasswordConfirm" id="signupPasswordConfirm" placeholder="Confirm Password">
+              <input type="password" name="signupPasswordConfirm" id="signupPasswordConfirm" placeholder="Confirm Password" ng-model="userInfo.passwordCheck">
             </div>
             <div>
               <div>
