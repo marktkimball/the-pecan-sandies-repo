@@ -6,6 +6,7 @@
 
         AccountService.getUsers().success(function(data){
             var routeId = $routeParams.Id;
+            console.log($location.path());
             console.log(routeId);
             console.log(data);
             var foundUser = _.where(data, {_id: routeId})
