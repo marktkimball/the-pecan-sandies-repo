@@ -135,32 +135,10 @@ IMPORTS
       max-height: 100%;
       border-radius: 1%; }
       .loginContainer > .row > .panel > .panel-body > .loginBlock {
-        height: 60%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-        .loginContainer > .row > .panel > .panel-body > .loginBlock > div {
-          height: 40%;
-          width: 80%;
-          font-size: 1rem;
-          color: #42929D;
+        height: 70%; }
+        .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm {
+          height: 100%;
+          width: 100%;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -181,19 +159,56 @@ IMPORTS
           -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-          .loginContainer > .row > .panel > .panel-body > .loginBlock > div > i {
-            font-size: 1.25rem; }
-          .loginContainer > .row > .panel > .panel-body > .loginBlock > div > input {
-            margin-top: 10px;
-            border-radius: 1%;
-            border: 3px solid #F8D9D6;
-            text-align: center;
-            padding: 2.5px; }
-            .loginContainer > .row > .panel > .panel-body > .loginBlock > div > input:focus {
-              border-color: #42929D;
-              outline: 0; }
+          .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div {
+            height: 33.33%;
+            width: 80%;
+            font-size: 1rem;
+            color: #42929D;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+            .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div > i {
+              font-size: 1.25rem; }
+            .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div > input {
+              width: 100%;
+              margin-top: 5px;
+              border-radius: 1%;
+              border: 3px solid #F8D9D6;
+              text-align: center;
+              padding: 2.5px; }
+              .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div > input:focus {
+                border-color: #42929D;
+                outline: 0; }
+            .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div > input[type=submit] {
+              border: none;
+              padding: 10px 0;
+              width: 100%;
+              background-color: #F8D9D6;
+              border-radius: 2.5%;
+              -webkit-transition: all .25s ease;
+              transition: all .25s ease; }
+              .loginContainer > .row > .panel > .panel-body > .loginBlock > .loginForm > div > input[type=submit]:hover {
+                background-color: #42929D;
+                color: white; }
       .loginContainer > .row > .panel > .panel-body > .signupBlock {
-        height: 40%;
+        height: 30%;
         font-size: 0.85rem;
         display: -webkit-box;
         display: -webkit-flex;
