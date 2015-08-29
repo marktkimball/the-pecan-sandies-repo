@@ -7,13 +7,11 @@
       var getStylists = function(){
         MainService.getStylists()
           .success(function(data){
-            var stylists = _.filter(data, function(el){
+            $scope.stylists = _.filter(data, function(el){
               if(el.stylist){
-                console.log(el);
                 return el;
               }
             });
-            console.log("STYLIST: ", stylists);
           })
           .error(function(error){
             console.log("Error: ", error);

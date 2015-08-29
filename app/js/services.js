@@ -13,7 +13,6 @@
       };
 
       return {
-        getModels : getModels,
         getStylists : getStylists,
         updateProfile : updateProfile
       };
