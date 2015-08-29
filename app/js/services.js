@@ -12,9 +12,14 @@
         return $http.put('/users', data);
       };
 
+      var sendNotification = function(data) {
+        return $http.put('/notification', data);
+      }
+
       return {
         getStylists : getStylists,
-        updateProfile : updateProfile
+        updateProfile : updateProfile,
+        sendNotification : sendNotification
       };
 
     });
