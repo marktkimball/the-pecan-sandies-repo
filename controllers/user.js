@@ -6,6 +6,24 @@ var passport = require('passport');
 var User = require('../models/User');
 var secrets = require('../config/secrets');
 
+
+/**
+ * PUT /editaccount
+ * Login page.
+ */
+
+exports.sendnotification = function(req, res, next) {
+
+  }
+
+exports.editaccount = function(req, res, next) {
+
+  User.find({_id: req.body._id}, function(err, user) {
+
+    console.log(user[0]);
+
+  };
+
 /**
  * GET /login
  * Login page.
