@@ -13,11 +13,15 @@
         })
         .when('/login', {
           templateUrl: 'views/login.html',
-          controller: 'LoginController',
+          controller: 'LoginController'
         })
         .when('/signup', {
           templateUrl: 'views/signup.html',
-          controller: 'LoginController',
+          controller: 'LoginController'
+        })
+        .when('/home', {
+          templateUrl: 'views/home.html',
+          controller: 'MainController'
         })
         .when('/account', {
           templateUrl: 'views/account.html',
@@ -25,7 +29,7 @@
         })
         .when('/404', {
           templateUrl: 'views/404.html',
-          controller: 'MainController',
+          controller: 'MainController'
         })
         .otherwise({
           redirectTo: '/404'

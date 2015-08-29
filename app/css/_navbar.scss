@@ -1,0 +1,106 @@
+/**************************
+  NAVBAR
+**************************/
+
+nav {
+  margin-bottom: 75px;
+  border: 0;
+  height: 50px;
+  background-color: $c3;
+  @include flexbox(row, center, center);
+
+  > div {
+    height: 100%;
+    @include flexbox(row, center, center);
+  }
+
+  > div:first-of-type {
+    width: 23.625%;
+    font-size: 1.5rem;
+    font-family: $display;
+    color: $c1;
+  }
+
+  > div:nth-of-type(2) {
+    width: 21.375%;
+    @include flexbox(row, flex-end, center);
+
+    > button {
+      position: relative;
+      background-color: $c1;
+      color: $c3;
+      border-radius: 5px;
+      padding: 0;
+      border: 0;
+      width: 100%;
+      height: 70%;
+      z-index: 9;
+      font-size: 1rem;
+      @include flexbox(row, center, center);
+      @include transition;
+
+      &:hover {
+        background-color: $c2;
+        color: white;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  > div:nth-of-type(3) {
+    width: 10%;
+    position: relative;
+    background-color: pink;
+
+    > img {
+      border-radius: 50%;
+      position: relative;
+      top: 0;
+      max-width: 110%;
+      border: 10px solid $c3;
+      box-sizing: content-box;
+      z-index: 10;
+    }
+  }
+
+  > div:nth-of-type(4) {
+    width: 35%;
+    @include flexbox(row, space-around, center);
+
+    > a {
+      position: relative;
+      background-color: $c1;
+      color: $c3;
+      border-radius: 5px;
+      width: 47.5%;
+      height: 70%;
+      z-index: 9;
+      font-size: 1.4rem;
+      @include flexbox(row, center, center);
+      @include transition;
+
+      &:hover {
+        text-decoration: none;
+        background-color: $c2;
+        color: white;
+      }
+    }
+  }
+
+  > div:nth-of-type(5) {
+    width: 10%;
+    font-size: 1.4rem;
+
+    > a {
+      color: $c1;
+      @include transition;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
