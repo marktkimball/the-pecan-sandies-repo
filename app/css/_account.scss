@@ -1,73 +1,131 @@
-.headerWrap {
-  height: 50px;
-  width: 100%;
-  background-color: $c3;
-}
-
 .contentWrap {
-  width: 100%;
-  height: 100%;
+  width: 65%;
+  height: auto;
   min-height: 1000px;
   max-width: 1000px;
   margin: 0 auto;
+  background: white;
+  border-left: 5px solid $c1;
+  border-right: 5px solid $c1;
 
   .rating {
+    padding: 100px 0 50px;
     width: 100%;
-    height: 100px;
+    height: auto;
+    font-size: 2rem;
     @include flexbox(row, center, center);
+
     i {
-      color: black;
+      color: gold;
+      margin: 0 6.25px;
     }
   }
 
   .skillsWrap {
-    width: 100%;
+    margin: 0 auto;
+    width: 75%;
     height: 100%;
-    @include flexbox(row, center, center);
+    @include flexbox(row, space-around, center);
 
-    .circles {
-      height: 150px;
-      width: 150px;
-      background-color: $c1;
-      margin-left: 10px;
-      margin-right: 10px;
+    .skillBlock {
+
+      .circles {
+        cursor: pointer;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: lightgray;
+        @include flexbox(row, center, center);
+        @include transition;
+
+        > svg {
+          height: 100px;
+          width: 100px;
+          fill: $dt;
+          @include transition;
+        }
+
+        &:hover {
+          background-color: $c2;
+
+          & + .skillsPrice {
+            color: $c3;
+          }
+
+          > svg {
+            fill: white;
+          }
+        }
+      }
+
+      .skillsPrice {
+        font-size: 1.1rem;
+        margin-top: 12.5px;
+        text-align: center;
+        @include transition;
+      }
     }
 
   }
   .aboutWrap {
     width: 80%;
-    height: 200px;
+    height: auto;
     border-bottom: 1px solid lightgray;
     margin: 0 auto;
     margin-top: 50px;
+    font-size: 1rem;
+
     h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.75rem;
+    }
+
+    p {
       margin-bottom: 25px;
     }
   }
   .availability {
     width: 80%;
-    height: 200px;
-    margin: 0 auto;
+    height: auto;
+    margin: 25px auto 0;
     @include flexbox(column, center, center);
+
+    h1 {
+      font-size: 1.75rem;
+      margin: 25px 0 50px;
+    }
+
     .dates {
-      @include flexbox(row, center, center);
+      @include flexbox(row, space-between, center);
       width: 100%;
-      height: 50px;
+      height: auto;
       font-size: 24px;
       font-weight: bold;
+
       .date {
-        height: 35px;
-        width: 50px;
+        height: auto;
+        width: 14.25%;
         text-align: center;
         @include transition;
+
+        > div:first-of-type {
+          font-size: 1.15rem;
+          margin-bottom: 12.5px;
+          text-decoration: underline;
+        }
+
+        > div:last-of-type {
+          font-size: 0.75rem;
+        }
       }
       .date:hover {
         cursor: pointer;
-        background-color: lightgray;
-        color: black;
+        background-color: $c2;
+        color: white;
       }
       .dateInactive {
-        color: lightgray;
+        color: $dt;
       }
     }
   }
