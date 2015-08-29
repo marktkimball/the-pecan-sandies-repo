@@ -9,18 +9,11 @@
       };
 
       var signup = function(userInfo){
-        $http.post('/signup', userInfo)
-          .success(function(){
-            // console.log("SignUp: ", userInfo);
-            $location.path('/form');
-          })
-          .error(function(error){
-            // console.log("Signup error: ", error);
-          })
+        return $http.post('/signup', userInfo);
       };
 
       var editAccount = function(userInfo){
-        $http.put('/editaccount', userInfo);
+        return $http.put('/editaccount', userInfo);
       }
 
       return {

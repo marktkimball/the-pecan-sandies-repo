@@ -15,7 +15,7 @@
           templateUrl: 'views/login.html',
           controller: 'LoginController'
         })
-        .when('/form', {
+        .when('/form/:Id', {
           templateUrl: 'views/form.html',
           controller: 'LoginController'
         })
