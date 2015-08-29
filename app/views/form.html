@@ -9,20 +9,20 @@
   <div class="formWrap">
     <form>
       <div class="formName">
-        <h2>Name</h2>
-        <input type="text" placeholder="Name" ng-model="userInfo.name"/>
+        <h2>Name*</h2>
+        <input type="text" placeholder="Name" ng-model="userInfo.name" required/>
       </div>
       <div class="formImage">
         <h2>Profile Picture</h2>
         <input type="text" placeholder="Image URL" ng-model="userInfo.picture"/>
       </div>
       <div class="formNumber">
-        <h2>Contact Number</h2>
-        <input type="text" placeholder="Number" ng-model="userInfo.number"/>
+        <h2>Contact Number*</h2>
+        <input type="text" placeholder="Number" ng-model="userInfo.number" required/>
       </div>
       <div class="formAbout">
-        <h2>About <span>(max 200 characters)</span></h2>
-        <textarea type="text" placeholder="Tell us a little about yourself!" cols="30" rows="5" maxlength="200" ng-model="userInfo.about"></textarea>
+        <h2>About* <span>(max 200 characters)</span></h2>
+        <textarea type="text" placeholder="Tell us a little about yourself!" cols="30" rows="5" maxlength="200" ng-model="userInfo.about" required></textarea>
       </div>
       <div class="formSkills">
         <h2>Skills</h2>
@@ -346,7 +346,7 @@
         </div>
     </div>
     <div class="formSubmit">
-      <input type="submit" name="formSubmitButton" id="formSubmitButton" value="SUBMIT" ng-click="submitForm(userInfo)">
+      <input type="submit" name="formSubmitButton" id="formSubmitButton" value="SUBMIT" ng-click="submitForm(userInfo, $event)">
     </div>
   </form>
   </div>

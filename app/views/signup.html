@@ -4,31 +4,31 @@
       <h1 class="text-center loginTitle">Beaut</h1>
       <div class="panel-body">
         <div class="signupBlock">
-          <form id="loginForm" class="signupForm">
+          <form id="signupForm" class="signupForm">
             <div>
               <i class="fa fa-user"></i>
-              <input type="text" name="signupUsername" id="signupUsername" placeholder="Email Address" ng-model="userInfo.email">
+              <input type="text" name="signupUsername" id="signupUsername" placeholder="Email Address" ng-model="userInfo.email" required>
             </div>
             <div>
               <i class="fa fa-key"></i>
-              <input type="password" name="signupPassword" id="signupPassword" placeholder="Password" ng-model="userInfo.password">
+              <input type="password" name="signupPassword" id="signupPassword" placeholder="Password" ng-model="userInfo.password" required>
             </div>
             <div>
               <i class="fa fa-key"></i>
-              <input type="password" name="signupPasswordConfirm" id="signupPasswordConfirm" placeholder="Confirm Password" ng-model="userInfo.confirmPassword">
+              <input type="password" name="signupPasswordConfirm" id="signupPasswordConfirm" placeholder="Confirm Password" ng-model="userInfo.confirmPassword" required>
             </div>
             <div>
               <div>
-                <input type="radio" name="signupType" id="signupStylist" ng-value="true" ng-model="userInfo.stylist">
+                <input type="radio" name="signupType" id="signupStylist" ng-value="true" ng-model="userInfo.stylist" required>
                 <label for="signupStylist">Stylist</label>
               </div>
               <div>
-                <input type="radio" name="signupType" id="signupModel" ng-value="false" ng-model="userInfo.stylist">
+                <input type="radio" name="signupType" id="signupModel" ng-value="false" ng-model="userInfo.stylist" required>
                 <label for="signupModel">Model</label>
               </div>
             </div>
             <div>
-              <input type="submit" name="signupSubmit" id="signupSubmit" value="REGISTER" ng-click="signup(userInfo)">
+              <input type="submit" name="signupSubmit" id="signupSubmit" value="REGISTER" ng-click="signup(userInfo, $event)">
             </div>
           </form>
         </div>
