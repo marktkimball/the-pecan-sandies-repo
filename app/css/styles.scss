@@ -1,0 +1,193 @@
+/**************************
+  SASS VARIABLES & MIXINS
+**************************/
+
+$pt: #212121;
+$ht: #E6C0C3;
+$st: #727272;
+$dt: #B6B6B6;
+$ddt: #878787;
+$wt: rgba(255,255,255,0.75);
+
+$lightsuccess: #68AD6A;
+$success: #4CAF50; 
+$darksuccess: #388E3C;
+
+$lightfailure: #F2756D;
+$failure: #F44336;
+$darkfailure: #D32F2F;
+
+$c1: #F8D9D6;
+$c2: #84C3C8;
+$c3: #42929D;
+$c4: #767877;
+$c5: #D4D6D1;
+
+$sans: 'Roboto', sans-serif;
+$serif: 'Roboto Slab', serif;
+$display: 'Lobster Two', cursive;
+
+@mixin flexbox($direction, $justify, $align) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+          flex-direction: $direction;
+  -webkit-box-pack: $justify;
+  -webkit-justify-content: $justify;
+  -ms-flex-pack: $justify;
+          justify-content: $justify;
+  -webkit-box-align: $align;
+  -webkit-align-items: $align;
+  -ms-flex-align: $align;
+          align-items: $align;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+@mixin transition {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+/**************************
+SETUP
+**************************/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $pt;
+}
+
+a, a:active, a:focus {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans;
+}
+
+h1, h2, h3, h4, h5, h6, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 24px;
+  font-family: $serif;
+  color: $pt;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url('../media/pink_rice.png');
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+/**************************
+  ANIMATIONS
+**************************/
+
+.ng-enter {
+  -webkit-animation: fadeIn .25s both ease-in;
+  animation: fadeIn .25s both ease-in;
+  z-index: 9;
+}
+.ng-leave {
+  -webkit-animation: fadeOut .125s both ease-in;
+  animation: fadeOut .125s both ease-in;
+  z-index: 8;
+}
+
+@keyframes fadeIn {
+    0%      { opacity: 0; }
+    50%     { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0%      { opacity: 1; }
+    100%    { opacity: 0; }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/**************************
+  IMPORTS
+**************************/
+
+@import 'navbar';
+@import 'login';
+@import 'feed';
+@import 'account';
+@import 'form';
+@import 'mailbox';
+@import 'footer';
+@import 'queries';

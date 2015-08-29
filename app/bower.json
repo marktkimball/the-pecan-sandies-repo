@@ -1,0 +1,21 @@
+{
+  "name": "Beaut",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ClaytonKinder/the-pecan-sandies-repo",
+  "authors": [
+    "Clayton Kinder <ClaytonAlanKinder@gmail.com>"
+  ],
+  "description": "Matching app for stylists and future models.",
+  "main": "index.html",
+  "keywords": [
+    "Beauty"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
