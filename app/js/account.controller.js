@@ -2,11 +2,12 @@
   'use strict';
   angular
     .module('beaut')
-    .controller('AccountController', function($scope, $route, $routeParams, $location, AccountService){
-
+    .controller('AccountController', function($scope, $route, $routeParams, $rootScope, $location, AccountService){
+    
         AccountService.getUsers().success(function(data){
 
             var routeId = $routeParams.Id;
+            $scope.userId = routeId;
             console.log(routeId);
             console.log(data);
             var foundUser = _.where(data, {_id: routeId})
