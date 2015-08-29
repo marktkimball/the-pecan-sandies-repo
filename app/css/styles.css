@@ -388,6 +388,141 @@ IMPORTS
               background-color: #42929D;
               color: white; }
 
+.headerWrap {
+  height: 50px;
+  width: 100%;
+  background-color: #42929D; }
+
+.contentWrap {
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .contentWrap .rating {
+    width: 100%;
+    height: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .contentWrap .rating i {
+      color: black; }
+  .contentWrap .skillsWrap {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .contentWrap .skillsWrap .circles {
+      height: 150px;
+      width: 150px;
+      background-color: #F8D9D6;
+      margin-left: 10px;
+      margin-right: 10px; }
+  .contentWrap .aboutWrap {
+    width: 80%;
+    height: 200px;
+    border-bottom: 1px solid lightgray;
+    margin: 0 auto;
+    margin-top: 50px; }
+    .contentWrap .aboutWrap h1 {
+      margin-bottom: 25px; }
+  .contentWrap .availability {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .contentWrap .availability .dates {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      font-weight: bold; }
+      .contentWrap .availability .dates .date {
+        height: 35px;
+        width: 50px;
+        text-align: center;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease; }
+      .contentWrap .availability .dates .date:hover {
+        cursor: pointer;
+        background-color: lightgray;
+        color: black; }
+      .contentWrap .availability .dates .dateInactive {
+        color: lightgray; }
+
 /**************************
   NAVBAR
 **************************/

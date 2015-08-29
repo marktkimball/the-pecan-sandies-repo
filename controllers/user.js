@@ -12,7 +12,7 @@ var secrets = require('../config/secrets');
  */
 exports.getLogin = function(req, res) {
   if (req.user) return res.redirect('/');
-  res.render('account/login', {
+  res.render('index', {
     title: 'Login'
   });
 };
@@ -42,6 +42,7 @@ exports.postLogin = function(req, res, next) {
       if (err) return next(err);
       req.flash('success', { msg: 'Success! You are logged in.' });
       res.redirect(req.session.returnTo || '/');
+      console.log('i worked!');
     });
   })(req, res, next);
 };
@@ -76,29 +77,34 @@ exports.postSignup = function(req, res, next) {
   req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
 
   var errors = req.validationErrors();
+  console.log(req.body);
 
   if (errors) {
     req.flash('errors', errors);
-    return res.redirect('/signup');
+    return res.redirect('/login');
   }
 
   var user = new User({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
+    stylist:req.body.stylist,
+    active: false
   });
 
   User.findOne({ email: req.body.email }, function(err, existingUser) {
     if (existingUser) {
       req.flash('errors', { msg: 'Account with that email address already exists.' });
-      return res.redirect('/signup');
-    }
+      return res.redirect('/login');
+    } else {
     user.save(function(err) {
-      if (err) return next(err);
-      req.logIn(user, function(err) {
         if (err) return next(err);
-        res.redirect('/');
+        req.logIn(user, function(err) {
+          if (err) return next(err);
+          console.log('new user saved...should be', user);
+          res.redirect('/login');
+        });
       });
-    });
+    };
   });
 };
 

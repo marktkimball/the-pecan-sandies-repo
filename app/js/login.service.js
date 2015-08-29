@@ -20,12 +20,13 @@
             // console.log("SignUp: ", userInfo);
           })
           .error(function(error){
-            console.log("Signup error: ", error);
+            // console.log("Signup error: ", error);
           })
       };
 
       return {
-        signup : signup
+        signup : signup,
+        login : login
       };
 
     });
