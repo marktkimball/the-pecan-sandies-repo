@@ -12,9 +12,29 @@ var secrets = require('../config/secrets');
  * Login page.
  */
 
-exports.sendnotification = function(req, res, next) {
+exports.updateStatus = function(req, res, next) {
+  console.log('im working');
+  User.find({_id: req.body._id}, function(err, user) {
+    console.log('found user', user[0]);
+    console.log('I am the body', req.body);
 
-  }
+    user[0].location = req.body.userLocation;
+    console.log('active?',user[0].active);
+    if (user[0].active == false) {
+      user[0].active = true;
+    } else {
+      user[0].active = false;
+    }
+
+    user[0].save(function(err) {
+      if(err) throw err;
+        console.log('account info changed', user[0]);
+      })
+
+    res.send(user[0]);
+
+  });
+}
 
 exports.editaccount = function(req, res, next) {
 
