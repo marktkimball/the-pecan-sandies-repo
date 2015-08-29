@@ -1263,4 +1263,174 @@ nav {
       nav > div:nth-of-type(5) > a:hover {
         color: white; }
 
+.formPageWrap {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke; }
+
+.headerWrap {
+  height: 200px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-bottom: 1px solid lightgray; }
+  .headerWrap h1 {
+    color: #42929D;
+    font-size: 50px; }
+  .headerWrap h2 {
+    color: #767877;
+    padding-left: 25px; }
+
+.formWrap {
+  height: 100%;
+  margin-top: 25px; }
+  .formWrap form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .formWrap form h2 {
+      font-weight: lighter; }
+    .formWrap form .drop {
+      height: 50px;
+      width: 50px;
+      margin-left: 25px;
+      margin-right: 25px;
+      padding: 10px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease; }
+    .formWrap form .circles {
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+      margin-left: 25px;
+      margin-right: 25px;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: lightgray;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease; }
+      .formWrap form .circles svg {
+        height: 100px;
+        width: 100px;
+        fill: #B6B6B6;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease; }
+      .formWrap form .circles:hover {
+        background-color: #84C3C8; }
+        .formWrap form .circles:hover + .skillsPrice {
+          color: #42929D; }
+        .formWrap form .circles:hover > svg {
+          fill: white; }
+    .formWrap form .radioSkills {
+      margin-top: 10px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .formWrap form .dropPrice {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .formWrap form textarea {
+      resize: none;
+      width: 60%;
+      margin: 10px;
+      max-width: 800px; }
+    .formWrap form input {
+      width: 60%;
+      margin: 10px;
+      max-width: 800px; }
+
 /*# sourceMappingURL=styles.css.map */
