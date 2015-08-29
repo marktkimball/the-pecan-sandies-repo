@@ -11,8 +11,9 @@
       $routeProvider
         .when('/', {
           templateUrl: 'views/login.html',
-          controller: 'MainController',
+          controller: 'LoginController',
         })
+
         .when('/404', {
           templateUrl: 'views/404.html',
           controller: 'MainController',
