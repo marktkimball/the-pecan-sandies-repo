@@ -108,12 +108,14 @@ ANIMATIONS
 **************************/
 
 .ng-enter {
-  -webkit-animation: fadeIn .5s both ease-in;
-  animation: fadeIn .5s both ease-in; z-index: 9;
+  -webkit-animation: fadeIn 5s both ease-in;
+  animation: fadeIn 5s both ease-in;
+  z-index: 9;
 }
 .ng-leave {
-  -webkit-animation: fadeOut .25s both ease-in;
-  animation: fadeOut .25s both ease-in; z-index: 8;
+  -webkit-animation: fadeOut 2.5s both ease-in;
+  animation: fadeOut 2.5s both ease-in;
+  z-index: 8;
 }
 
 @keyframes fadeIn {
@@ -176,4 +178,3 @@ IMPORTS
 **************************/
 
 @import 'login';
-@import 'signup';
