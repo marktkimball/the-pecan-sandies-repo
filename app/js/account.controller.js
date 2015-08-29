@@ -82,8 +82,19 @@
               }
             };
             daysCheck();
-
           });
+
+        $scope.toggleStylin = function(){
+          if($scope.active === true){
+            $scope.active = false;
+          }else{
+            $scope.active = true;
+            navigator.geolocation.getCurrentPosition(GetLocation);
+            function GetLocation(location) {
+              console.log("LOCAL: ", location);
+            }
+          }
+        }
 
         $scope.modalToggle = function(){
           $('.modalBackground').addClass('behind');
