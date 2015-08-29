@@ -3,8 +3,11 @@
     Beaut
   </div>
   <div class="text-center">
-    <button id="stylistActivate">
+    <button id="stylistActivate" ng-click="toggleStylin()" ng-if="!active">
       START STYLIN'
+    </button>
+    <button id="stylistActivate" ng-click="toggleStylin()" ng-if="active">
+      STOP STYLIN'
     </button>
   </div>
   <div class="text-center">
