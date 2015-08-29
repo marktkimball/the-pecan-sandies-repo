@@ -27,6 +27,10 @@
           templateUrl: 'views/account.html',
           controller: 'MainController'
         })
+        .when('/feed', {
+          templateUrl: 'views/feed.html',
+          controller: 'MainController'
+        })
         .when('/404', {
           templateUrl: 'views/404.html',
           controller: 'MainController'
