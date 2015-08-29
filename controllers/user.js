@@ -11,9 +11,8 @@ var secrets = require('../config/secrets');
  * Login page.
  */
 exports.getLogin = function(req, res) {
-  if (req.user) return res.redirect('/');
-  res.render('index', {
-    title: 'Login'
+  User.find(function(err,user) {
+    res.send(user);
   });
 };
 
@@ -24,6 +23,7 @@ exports.getLogin = function(req, res) {
 exports.postLogin = function(req, res, next) {
   req.assert('email', 'Email is not valid').isEmail();
   req.assert('password', 'Password cannot be blank').notEmpty();
+
 
   var errors = req.validationErrors();
 
@@ -39,10 +39,11 @@ exports.postLogin = function(req, res, next) {
       return res.redirect('/login');
     }
     req.logIn(user, function(err) {
+      console.log(user);
       if (err) return next(err);
+      res.send(user);
       req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
-      console.log('i worked!');
+      // res.redirect(req.session.returnTo || '/');
     });
   })(req, res, next);
 };
@@ -362,3 +363,7 @@ exports.postForgot = function(req, res, next) {
     res.redirect('/forgot');
   });
 };
+
+exports.getMe = function(req, res, next ) {
+  res.send(req.user);
+}
