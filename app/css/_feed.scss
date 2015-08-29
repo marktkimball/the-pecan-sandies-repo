@@ -3,14 +3,14 @@
 **************************/
 
 .feedWrap {
+  position: relative;
   width: 65%;
   height: auto;
   min-height: 1000px;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 0 250px;
   background: white;
-  border-left: 5px solid $c1;
-  border-right: 5px solid $c1;
 
   .feedOptions {
     .feedOptionsContentWrapper {
@@ -184,6 +184,8 @@
 
         .feedCardImage {
           img {
+            height: 125px;
+            width: 125px;
             border-radius: 50%;
           }
         }

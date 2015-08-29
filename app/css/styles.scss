@@ -183,10 +183,11 @@ body {
   IMPORTS
 **************************/
 
+@import 'navbar';
 @import 'login';
 @import 'feed';
 @import 'account';
-@import 'navbar';
 @import 'form';
 @import 'mailbox';
 @import 'footer';
+@import 'queries';
