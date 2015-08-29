@@ -1525,6 +1525,7 @@ nav {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .formWrap form .formName,
+    .formWrap form .formNumber,
     .formWrap form .formImage,
     .formWrap form .formAbout {
       width: 70%;
@@ -1550,6 +1551,7 @@ nav {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
       .formWrap form .formName > h2,
+      .formWrap form .formNumber > h2,
       .formWrap form .formImage > h2,
       .formWrap form .formAbout > h2 {
         width: 100%;
@@ -1557,6 +1559,8 @@ nav {
         margin-bottom: 10px; }
       .formWrap form .formName > input,
       .formWrap form .formName > textarea,
+      .formWrap form .formNumber > input,
+      .formWrap form .formNumber > textarea,
       .formWrap form .formImage > input,
       .formWrap form .formImage > textarea,
       .formWrap form .formAbout > input,
@@ -1571,6 +1575,8 @@ nav {
         transition: all .25s ease; }
         .formWrap form .formName > input:focus,
         .formWrap form .formName > textarea:focus,
+        .formWrap form .formNumber > input:focus,
+        .formWrap form .formNumber > textarea:focus,
         .formWrap form .formImage > input:focus,
         .formWrap form .formImage > textarea:focus,
         .formWrap form .formAbout > input:focus,

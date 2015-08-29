@@ -9,6 +9,7 @@
 
       $scope.login = function(event) {
         event.preventDefault;
+        
         var userInfo = $scope.userInfo;
         console.log("Login user: ", userInfo);
         LoginService.login(userInfo).success(function(data){
@@ -31,9 +32,15 @@
         .success(function(data){
           // console.log("SignUp: ", userInfo);
           var num = data.length - 1
-          $scope.userInfo = data[num];
-          console.log($scope.userInfo);
-          $location.path('/form/' + data[num]._id);
+          if (data[num].stylist === true) {
+            $scope.userInfo = data[num];
+            console.log($scope.userInfo);
+            $location.path('/form/' + data[num]._id);
+          } else {
+            $scope.userInfo = data[num];
+            console.log($scope.userInfo);
+            $location.path('/modelform/' + data[num]._id);
+          }
         })
         .error(function(error){
           // console.log("Signup error: ", error);
