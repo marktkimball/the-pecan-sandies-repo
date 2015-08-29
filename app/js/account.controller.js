@@ -26,8 +26,6 @@
             $scope.active = foundUser[0].active;
             $scope.cardInfo = foundUser[0].cardInfo;
 
-            console.log($location.path());
-
             $scope.activeCheck = function() {
               if ($scope.active === true && $scope.stylist === true) {
                 return true;
