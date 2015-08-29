@@ -4,7 +4,6 @@
   angular
     .module('beaut', [
       'ngRoute',
-      'ngAnimate',
       'underscore'
     ])
     .config(function ($routeProvider) {
@@ -19,6 +18,10 @@
         .when('/signup', {
           templateUrl: 'views/signup.html',
           controller: 'LoginController',
+        })
+        .when('/account', {
+          templateUrl: 'views/account.html',
+          controller: 'MainController'
         })
         .when('/404', {
           templateUrl: 'views/404.html',

@@ -7,10 +7,9 @@
 
       $scope.login = function(event) {
         event.preventDefault;
-        var email = $scope.userInfo.email;
-        var password = $scope.userInfo.password;
-        var stylist = $scope.userInfo.stylist;
-        console.log("UserInfo: ", email, password, stylist);
+        var userInfo = $scope.userInfo;
+        console.log("Login user: ", userInfo);
+        LoginService.login(userInfo);
       };
 
       $scope.signup = function(event){
