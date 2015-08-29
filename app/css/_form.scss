@@ -1,0 +1,99 @@
+.formPageWrap {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.headerWrap {
+  height: 200px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-bottom: 1px solid lightgray;
+  h1 {
+    color: $c3;
+    font-size: 50px;
+  }
+  h2 {
+    color: $c4;
+    padding-left: 25px;
+  }
+}
+
+.formWrap {
+  height: 100%;
+  margin-top: 25px;
+
+  form {
+      @include flexbox(column, center, center);
+      h2 {
+        font-weight: lighter;
+      }
+
+      .drop {
+        height: 50px;
+        width: 50px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 10px;
+        @include flexbox(row, center, center);
+        @include transition;
+      }
+
+      .circles {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: lightgray;
+        @include flexbox(row, center, center);
+        @include transition;
+
+        svg {
+          height: 100px;
+          width: 100px;
+          fill: $dt;
+          @include transition;
+        }
+
+        &:hover {
+          background-color: $c2;
+
+          & + .skillsPrice {
+            color: $c3;
+          }
+
+          > svg {
+            fill: white;
+          }
+        }
+      }
+
+  .radioSkills {
+    margin-top: 10px;
+    @include flexbox(row, center, center);
+  }
+
+  .dropPrice {
+    @include flexbox(row, center, center);
+  }
+
+    textarea {
+      resize: none;
+      width: 60%;
+      margin: 10px;
+      max-width: 800px;
+    }
+
+    input {
+      width: 60%;
+      margin: 10px;
+      max-width: 800px;
+    }
+  }
+}
