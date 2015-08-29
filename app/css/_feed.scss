@@ -2,53 +2,261 @@
   FEED
 **************************/
 
-.feedContainer{
-  .row{
-    .col-lg-6{
-      margin-bottom: 20px;
-      .individualStylist{
-        display:flex;
-        height:200px;
-        width:100%;
-        border:solid 1px $c4;
-        padding:15px;
-        .profileImage{
-          flex:1;
-          display:flex;
-          align-items: center;
-          margin-left:15px;
-          img{
-            border-radius:100%;
-            max-height:200px;
+.feedWrap {
+  width: 65%;
+  height: auto;
+  min-height: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-left: 5px solid $c1;
+  border-right: 5px solid $c1;
+
+  .feedOptions {
+    .feedOptionsContentWrapper {
+      display: none;
+
+      .feedOptionsContent {
+        height: 100%;
+        width: 100%;
+        @include flexbox(row, center, center);
+        text-align: center;
+        padding: 75px 0 0;
+        height: 300px;
+        background-color: $c2;
+
+        .feedOptionsSkills {
+          height: 25%;
+          width: 100%;
+          @include flexbox(row, center, center);
+
+          .feedOptionsSkillBlock {
+
+            .circles {
+              margin: 0 12.5px;
+              cursor: pointer;
+              width: 75px;
+              height: 75px;
+              background-color: $c3;
+              border-radius: 50%;
+              @include flexbox(row, center, center);
+              @include transition;
+
+              &:hover {
+                background-color: $ddt;
+                svg {
+                  fill: lightgray;
+                }
+              }
+
+              svg {
+                width: 50px;
+                height: 50px;
+                fill: white;
+                @include transition;
+              }
+            }
           }
         }
-        .infoBlock{
-          flex:3;
-          display:flex;
-          flex-direction:column;
-          justify-content: space-around;
-          .circle{
-            background-color:$c1;
-            border-radius: 100%;
-            height:75px;
-            width:75px;
-            margin:auto;
-          }
-          p{
-            text-align: center;
-          }
-          input {
-            width: 100%;
-            color: white;
-            background-color: $c3;
-            border-radius: 2.5%;
-            border: none;
-            text-align: center;
-            padding: 10px 0;
-            @include transition;
-            &:hover {
-              background-color: $c2;
+
+        .feedOptionsSort {
+          height: 75%;
+          width: 50%;
+          @include flexbox(row, center, center);
+
+          > div {
+            height: 80%;
+            width: 60%;
+            margin: 0 auto;
+            @include flexbox(row, center, center);
+
+            > div {
+              width: 100%;
+              @include flexbox(row, center, center);
+
+              > div {
+                > * {
+                  padding: 0;
+                  margin: 0;
+                }
+              }
+
+              > div:first-of-type {
+                width: 20%;
+
+                > input {
+                  font-size: 1.5rem;
+                }
+              }
+
+              > div:last-of-type {
+                width: 80%;
+
+                > label {
+                  font-size: 1rem;
+                }
+              }
             }
+          }
+        }
+
+        .feedOptionsFilter {
+          width: 50%;
+          height: 75%;
+          @include flexbox(row, center, center);
+
+          > div {
+            height: 100%;
+            @include flexbox(column, center, center);
+
+            > label {
+              font-size: 1.1rem;
+            }
+
+            > input {
+              text-align: center;
+              font-size: 1rem;
+              border: 5px solid $c1;
+              padding: 2.5px 5px;
+              @include transition;
+
+              &:focus {
+                outline: 0;
+                border-color: $c3;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .feedOptionsDropdown {
+      position: relative;
+      height: 75px;
+      background: $c2;
+      @include flexbox(row, center, center);
+
+      .dropdownIcon {
+        height: 158.391px;
+        width: 158.391px;
+        position: relative;
+        top: 0px;
+        background-color: $c2;
+        border-radius: 50%;
+        @include flexbox(row, center, center);
+
+        i {
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: white;
+          position: relative;
+          top: 32.5%;
+          @include transition;
+
+          &.dropdownToggled {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .feedList {
+    margin-top: 50px;
+    padding-top: 25px;
+    height: 1000px;
+    overflow: scroll;
+
+    .feedCard {
+      margin: 0 auto;
+      width: 95%;
+      height: 200px;
+      margin-bottom: 25px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      @include flexbox(row, center, center);
+
+      .feedCardInfo {
+        width: 20%;
+        height: 100%;
+        @include flexbox(column, space-around, center);
+
+        .feedCardImage {
+          img {
+            border-radius: 50%;
+          }
+        }
+
+        .feedCardRating {
+          font-size: 1rem;
+          color: gold;
+        }
+      }
+
+      .feedCardSkills {
+        height: 100%;
+        width: 60%;
+        @include flexbox(row, center, center);
+
+        .feedCardName {
+          width: 100%;
+          height: 30%;
+          color: $c3;
+          @include flexbox(row, center, center);
+        }
+
+        .feedCardSkill {
+          height: 70%;
+          width: 33.33%;
+          @include flexbox(column, center, center);
+
+          .feedCardSkillIcon {
+            text-align: center;
+
+            .circles {
+              margin: 0 auto;
+              background-color: $c3;
+              width: 75px;
+              height: 75px;
+              border-radius: 50%;
+              @include flexbox(row, center, center);
+
+              svg {
+                height: 50px;
+                width: 50px;
+                fill: white;
+              }
+            }
+          }
+
+          .feedCardSkillPrice {
+            font-size: 1rem;
+            color: $c3;
+          }
+        }
+      }
+
+      .feedCardBook {
+        width: 20%;
+        height: 100%;
+
+        > button {
+          height: 100%;
+          width: 100%;
+          border: 0;
+          background-color: $c3;
+          color: white;
+          font-size: 1.75rem;
+          font-weight: 300;
+          @include transition;
+
+          &:hover {
+            background-color: $c2;
+          }
+
+          &:focus {
+            outline: 0;
           }
         }
       }
