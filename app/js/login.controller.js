@@ -16,6 +16,9 @@
             } else {
               $location.path('/feed');
             }
+          } else {
+            alert('must sign up or wrong info!');
+          }
         });
       };
 
