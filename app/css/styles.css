@@ -1283,20 +1283,25 @@ nav {
 .formPageWrap {
   min-height: 100vh;
   height: 100%;
-  width: 100%;
-  background-color: whitesmoke; }
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+  border-left: 5px solid #F8D9D6;
+  border-right: 5px solid #F8D9D6; }
 
 .headerWrap {
   height: 150px;
-  width: 80%;
+  width: 95%;
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 25px;
   border-bottom: 1px solid lightgray; }
   .headerWrap h1 {
+    text-align: center;
     color: #42929D;
     font-size: 50px; }
   .headerWrap h2 {
+    text-align: center;
     color: #767877;
     padding-left: 25px; }
 
@@ -1304,6 +1309,7 @@ nav {
   height: 100%;
   margin-top: 25px; }
   .formWrap form {
+    padding-bottom: 100px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1324,23 +1330,20 @@ nav {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-    .formWrap form h2 {
-      font-weight: lighter; }
-    .formWrap form .drop {
-      height: 50px;
-      width: 50px;
-      margin-left: 25px;
-      margin-right: 25px;
-      padding: 10px;
+    .formWrap form .formName,
+    .formWrap form .formImage,
+    .formWrap form .formAbout {
+      width: 70%;
+      margin-bottom: 50px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1351,53 +1354,41 @@ nav {
       align-items: center;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-transition: all .25s ease;
-      transition: all .25s ease; }
-    .formWrap form .circles {
-      cursor: pointer;
-      height: 50px;
-      width: 50px;
-      margin-left: 25px;
-      margin-right: 25px;
-      padding: 10px;
-      border-radius: 50%;
-      background-color: lightgray;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-transition: all .25s ease;
-      transition: all .25s ease; }
-      .formWrap form .circles svg {
-        height: 100px;
-        width: 100px;
-        fill: #B6B6B6;
+      flex-wrap: wrap; }
+      .formWrap form .formName > h2,
+      .formWrap form .formImage > h2,
+      .formWrap form .formAbout > h2 {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px; }
+      .formWrap form .formName > input,
+      .formWrap form .formName > textarea,
+      .formWrap form .formImage > input,
+      .formWrap form .formImage > textarea,
+      .formWrap form .formAbout > input,
+      .formWrap form .formAbout > textarea {
+        border-radius: 10px;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        font-size: 1rem;
+        border: 5px solid #F8D9D6;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
-      .formWrap form .circles:hover {
-        background-color: #84C3C8; }
-        .formWrap form .circles:hover + .skillsPrice {
-          color: #42929D; }
-        .formWrap form .circles:hover > svg {
-          fill: white; }
-    .formWrap form .radioSkills {
+        .formWrap form .formName > input:focus,
+        .formWrap form .formName > textarea:focus,
+        .formWrap form .formImage > input:focus,
+        .formWrap form .formImage > textarea:focus,
+        .formWrap form .formAbout > input:focus,
+        .formWrap form .formAbout > textarea:focus {
+          outline: 0;
+          border-color: #42929D; }
+    .formWrap form h2 {
+      font-weight: lighter; }
+    .formWrap form .formSkills h2 {
+      text-align: center;
+      margin-bottom: 25px; }
+    .formWrap form .formSkills .radioSkills {
       margin-top: 10px;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1419,16 +1410,129 @@ nav {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-    .formWrap form .dropPrice {
+      .formWrap form .formSkills .radioSkills .radioSkill {
+        width: 33.33%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .formWrap form .formSkills .radioSkills .radioSkill .circles {
+          cursor: pointer;
+          height: 100px;
+          width: 100px;
+          margin-left: 25px;
+          margin-right: 25px;
+          padding: 10px;
+          border-radius: 50%;
+          background-color: lightgray;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-transition: all .25s ease;
+          transition: all .25s ease; }
+          .formWrap form .formSkills .radioSkills .radioSkill .circles.activeSkill {
+            background-color: #84C3C8; }
+            .formWrap form .formSkills .radioSkills .radioSkill .circles.activeSkill:hover {
+              background-color: #84C3C8; }
+            .formWrap form .formSkills .radioSkills .radioSkill .circles.activeSkill > svg {
+              fill: white; }
+          .formWrap form .formSkills .radioSkills .radioSkill .circles svg {
+            height: 100px;
+            width: 100px;
+            fill: #B6B6B6;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+          .formWrap form .formSkills .radioSkills .radioSkill .circles:hover {
+            background-color: #F8D9D6; }
+            .formWrap form .formSkills .radioSkills .radioSkill .circles:hover > svg {
+              fill: white; }
+        .formWrap form .formSkills .radioSkills .radioSkill > div:last-of-type {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+          .formWrap form .formSkills .radioSkills .radioSkill > div:last-of-type > input {
+            width: 60%;
+            margin: 10px 0 25px;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 5px;
+            border: 5px solid #F8D9D6;
+            color: #212121;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+            .formWrap form .formSkills .radioSkills .radioSkill > div:last-of-type > input:disabled {
+              border-color: white;
+              background-color: white;
+              color: white; }
+            .formWrap form .formSkills .radioSkills .radioSkill > div:last-of-type > input:focus {
+              outline: 0;
+              border-color: #42929D; }
+    .formWrap form textarea {
+      resize: none;
+      width: 60%;
+      margin: 10px 0 25px;
+      max-width: 800px; }
+    .formWrap form .formAvailability {
+      width: 100%;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -1440,43 +1544,9 @@ nav {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-    .formWrap form textarea {
-      resize: none;
-      width: 60%;
-      margin: 10px;
-      max-width: 800px; }
-    .formWrap form input {
-      width: 60%;
-      margin: 10px;
-      max-width: 800px; }
-    .formWrap form .availability {
-      width: 80%;
-      height: 200px;
-      margin: 25px auto 0;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: flex-start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: flex-start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-      .formWrap form .availability h1 {
-        font-size: 1.75rem;
-        margin: 25px 0 50px; }
-      .formWrap form .availability .dates {
+      .formWrap form .formAvailability > div h2 {
+        margin: 25px 0 25px; }
+      .formWrap form .formAvailability .dates {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1490,35 +1560,86 @@ nav {
         -webkit-justify-content: space-between;
         -ms-flex-pack: space-between;
         justify-content: space-between;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
+        -webkit-box-align: flex-start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        width: 100%;
+        width: 98%;
         height: auto;
         font-size: 24px;
-        margin-top: 10px;
         font-weight: bold; }
-        .formWrap form .availability .dates .date {
-          height: auto;
-          width: 14.25%;
+        .formWrap form .formAvailability .dates .date {
+          color: #B6B6B6;
+          height: 150px;
+          width: 14%;
           text-align: center;
           -webkit-transition: all .25s ease;
           transition: all .25s ease; }
-          .formWrap form .availability .dates .date > div:first-of-type {
+          .formWrap form .formAvailability .dates .date > div:first-of-type {
+            cursor: pointer;
             font-size: 1.15rem;
-            margin-bottom: 12.5px;
-            text-decoration: underline; }
-          .formWrap form .availability .dates .date > div:last-of-type {
-            font-size: 0.9rem; }
-        .formWrap form .availability .dates .date:hover {
-          cursor: pointer;
-          background-color: #84C3C8;
-          color: white; }
-        .formWrap form .availability .dates .dateInactive {
-          color: #B6B6B6; }
+            text-decoration: underline;
+            padding: 5px 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-transition: all .25s ease;
+            transition: all .25s ease; }
+            .formWrap form .formAvailability .dates .date > div:first-of-type:hover {
+              color: white;
+              background-color: #F8D9D6; }
+            .formWrap form .formAvailability .dates .date > div:first-of-type.activeDay {
+              background-color: #84C3C8;
+              color: white; }
+              .formWrap form .formAvailability .dates .date > div:first-of-type.activeDay:hover {
+                background-color: #84C3C8; }
+          .formWrap form .formAvailability .dates .date > div:last-of-type {
+            display: none;
+            font-size: 0.70rem;
+            background-color: #84C3C8;
+            padding: 0 0 10px;
+            color: white; }
+            .formWrap form .formAvailability .dates .date > div:last-of-type > input {
+              text-align: center;
+              padding: 0;
+              width: 90%;
+              color: #212121; }
+    .formWrap form .formSubmit {
+      width: 75%;
+      margin-top: 50px; }
+      .formWrap form .formSubmit input {
+        border-radius: 10px;
+        width: 100%;
+        background-color: #42929D;
+        color: white;
+        border: 0;
+        padding: 25px 0;
+        font-size: 2rem;
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease; }
+        .formWrap form .formSubmit input:focus {
+          outline: 0; }
+        .formWrap form .formSubmit input:hover {
+          background-color: #84C3C8; }
 
 /*# sourceMappingURL=styles.css.map */
