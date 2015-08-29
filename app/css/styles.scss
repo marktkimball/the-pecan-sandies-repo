@@ -1,5 +1,5 @@
 /**************************
-SASS VARIABLES & MIXINS
+  SASS VARIABLES & MIXINS
 **************************/
 
 $pt: #212121;
@@ -9,9 +9,11 @@ $dt: #B6B6B6;
 $ddt: #878787;
 $wt: rgba(255,255,255,0.75);
 
+$lightsuccess: #68AD6A;
 $success: #4CAF50;
 $darksuccess: #388E3C;
 
+$lightfailure: #F2756D;
 $failure: #F44336;
 $darkfailure: #D32F2F;
 
@@ -108,7 +110,7 @@ body {
 }
 
 /**************************
-ANIMATIONS
+  ANIMATIONS
 **************************/
 
 .ng-enter {
@@ -178,7 +180,7 @@ ANIMATIONS
 }
 
 /**************************
-IMPORTS
+  IMPORTS
 **************************/
 
 @import 'login';
@@ -186,3 +188,5 @@ IMPORTS
 @import 'account';
 @import 'navbar';
 @import 'form';
+@import 'mailbox';
+@import 'footer';

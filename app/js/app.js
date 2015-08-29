@@ -27,10 +27,10 @@
           templateUrl: 'views/home.html',
           controller: 'MainController'
         })
-        // .when('/account', {
-        //   templateUrl: 'views/account.html',
-        //   controller: 'MainController'
-        // })
+        .when('/mailbox', {
+          templateUrl: 'views/mailbox.html',
+          controller: 'MainController'
+        })
         .when('/account/:Id', {
           templateUrl: 'views/account.html',
           controller: 'AccountController'
