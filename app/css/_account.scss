@@ -30,7 +30,6 @@
     .skillBlock {
 
       .circles {
-        cursor: pointer;
         height: 150px;
         width: 150px;
         border-radius: 50%;
@@ -45,7 +44,7 @@
           @include transition;
         }
 
-        &:hover {
+        &.skillActive {
           background-color: $c2;
 
           & + .skillsPrice {
@@ -59,6 +58,7 @@
       }
 
       .skillsPrice {
+        color: $dt;
         font-size: 1.1rem;
         margin-top: 12.5px;
         text-align: center;
@@ -75,10 +75,13 @@
     margin-top: 50px;
     font-size: 1rem;
 
-    h1 {
-      text-align: center;
+    .aboutName {
       margin-bottom: 25px;
-      font-size: 1.75rem;
+      @include flexbox(row, space-between, center);
+
+      h1 {
+        font-size: 1.75rem;
+      }
     }
 
     p {
@@ -105,8 +108,9 @@
 
       .date {
         height: auto;
-        width: 14.25%;
+        width: 14%;
         text-align: center;
+        color: $dt;
         @include transition;
 
         > div:first-of-type {
@@ -119,13 +123,9 @@
           font-size: 0.75rem;
         }
       }
-      .date:hover {
-        cursor: pointer;
+      .date.dateActive {
         background-color: $c2;
         color: white;
-      }
-      .dateInactive {
-        color: $dt;
       }
     }
   }

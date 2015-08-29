@@ -695,8 +695,7 @@ IMPORTS
         .feedWrap .feedOptions .feedOptionsDropdown .dropdownIcon i.dropdownToggled {
           transform: rotate(-180deg); }
   .feedWrap .feedList {
-    margin-top: 50px;
-    padding-top: 25px;
+    padding-top: 50px;
     height: 1000px;
     overflow: scroll; }
     .feedWrap .feedList .feedCard {
@@ -940,7 +939,6 @@ IMPORTS
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .accountWrap .skillsWrap .skillBlock .circles {
-      cursor: pointer;
       height: 150px;
       width: 150px;
       border-radius: 50%;
@@ -973,13 +971,14 @@ IMPORTS
         fill: #B6B6B6;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
-      .accountWrap .skillsWrap .skillBlock .circles:hover {
+      .accountWrap .skillsWrap .skillBlock .circles.skillActive {
         background-color: #84C3C8; }
-        .accountWrap .skillsWrap .skillBlock .circles:hover + .skillsPrice {
+        .accountWrap .skillsWrap .skillBlock .circles.skillActive + .skillsPrice {
           color: #42929D; }
-        .accountWrap .skillsWrap .skillBlock .circles:hover > svg {
+        .accountWrap .skillsWrap .skillBlock .circles.skillActive > svg {
           fill: white; }
     .accountWrap .skillsWrap .skillBlock .skillsPrice {
+      color: #B6B6B6;
       font-size: 1.1rem;
       margin-top: 12.5px;
       text-align: center;
@@ -992,10 +991,30 @@ IMPORTS
     margin: 0 auto;
     margin-top: 50px;
     font-size: 1rem; }
-    .accountWrap .aboutWrap h1 {
-      text-align: center;
+    .accountWrap .aboutWrap .aboutName {
       margin-bottom: 25px;
-      font-size: 1.75rem; }
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: space-between;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: space-between;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .accountWrap .aboutWrap .aboutName h1 {
+        font-size: 1.75rem; }
     .accountWrap .aboutWrap p {
       margin-bottom: 25px; }
   .accountWrap .availability {
@@ -1052,8 +1071,9 @@ IMPORTS
       font-weight: bold; }
       .accountWrap .availability .dates .date {
         height: auto;
-        width: 14.25%;
+        width: 14%;
         text-align: center;
+        color: #B6B6B6;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
         .accountWrap .availability .dates .date > div:first-of-type {
@@ -1062,12 +1082,9 @@ IMPORTS
           text-decoration: underline; }
         .accountWrap .availability .dates .date > div:last-of-type {
           font-size: 0.75rem; }
-      .accountWrap .availability .dates .date:hover {
-        cursor: pointer;
+      .accountWrap .availability .dates .date.dateActive {
         background-color: #84C3C8;
         color: white; }
-      .accountWrap .availability .dates .dateInactive {
-        color: #B6B6B6; }
 
 /**************************
   NAVBAR
