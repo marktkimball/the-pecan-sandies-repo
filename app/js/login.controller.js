@@ -12,7 +12,7 @@
         LoginService.login(userInfo).success(function(data){
           if(data.email === userInfo.email) {
             if (data.stylist === true) {
-              $location.path('/account');
+              $location.path('/account/'+ data._id);
             } else {
               $location.path('/feed');
             }

@@ -15,6 +15,10 @@
           templateUrl: 'views/login.html',
           controller: 'LoginController'
         })
+        .when('/form', {
+          templateUrl: 'views/form.html',
+          controller: 'LoginController'
+        })
         .when('/signup', {
           templateUrl: 'views/signup.html',
           controller: 'LoginController'
@@ -23,9 +27,13 @@
           templateUrl: 'views/home.html',
           controller: 'MainController'
         })
-        .when('/account', {
+        // .when('/account', {
+        //   templateUrl: 'views/account.html',
+        //   controller: 'MainController'
+        // })
+        .when('/account/:Id', {
           templateUrl: 'views/account.html',
-          controller: 'MainController'
+          controller: 'AccountController'
         })
         .when('/feed', {
           templateUrl: 'views/feed.html',

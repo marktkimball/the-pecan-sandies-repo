@@ -12,8 +12,8 @@ var secrets = require('../config/secrets');
  */
 exports.getLogin = function(req, res) {
   User.find(function(err,user) {
-   res.send(user);
- });
+    res.send(user);
+  });
 };
 
 /**
@@ -363,3 +363,7 @@ exports.postForgot = function(req, res, next) {
     res.redirect('/forgot');
   });
 };
+
+exports.getMe = function(req, res, next ) {
+  res.send(req.user);
+}
