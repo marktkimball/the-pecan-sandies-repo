@@ -5,6 +5,7 @@
     .controller('AccountController', function($scope, $route, $routeParams, $rootScope, $location, AccountService){
     
         AccountService.getUsers().success(function(data){
+
             var routeId = $routeParams.Id;
             $scope.userId = routeId;
             console.log(routeId);
@@ -25,6 +26,14 @@
             $scope.stylist = foundUser[0].stylist;
             $scope.active = foundUser[0].active;
             $scope.cardInfo = foundUser[0].cardInfo;
+
+            $scope.activeCheck = function() {
+              if ($scope.active === true && $scope.stylist === true) {
+                return true;
+              } else {
+                return false;
+              }
+            }
 
             $scope.stylistCheck = function() {
               if ($scope.stylist === true) {
@@ -86,17 +95,29 @@
           });
 
         $scope.toggleStylin = function(){
+          event.preventDefault;
           if($scope.active === true){
-            $scope.active = false;
-          }else{
+            navigator.geolocation.getCurrentPosition(GetLocation);
+            function GetLocation(location) {
+              $scope.active = false;
+              var userInfo = {};
+              userInfo.userLocation = {};
+              userInfo.userLocation.latitude = location.coords.latitude;
+              userInfo.userLocation.longitude = location.coords.longitude;
+              userInfo._id = $routeParams.Id;
+              AccountService.status(userInfo);
+            }
+          } else {
             $scope.active = true;
             navigator.geolocation.getCurrentPosition(GetLocation);
             function GetLocation(location) {
-              var userLocation ={};
-              userLocation.latitude = location.coords.latitude;
-              userLocation.longitude = location.coords.longitude;
-              userLocation._id = $routeParams.Id;
-              console.log("LOCAL: ", userLocation);
+              var userInfo = {};
+              userInfo.userLocation = {};
+              userInfo.userLocation.latitude = location.coords.latitude;
+              userInfo.userLocation.longitude = location.coords.longitude;
+              userInfo._id = $routeParams.Id;
+              console.log("LOCAL: ", userInfo);
+              AccountService.status(userInfo);
             }
           }
         }
