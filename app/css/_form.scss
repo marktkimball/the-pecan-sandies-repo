@@ -56,6 +56,7 @@
     @include flexbox(column, center, center);
 
     .formName,
+    .formNumber,
     .formImage,
     .formAbout {
       width: 70%;

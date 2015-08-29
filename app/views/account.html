@@ -5,15 +5,16 @@
     <img src="http://www.placehold.it/200x200">
   </div>
   <div class="rating">
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i>
+    <p ng-if="finalRating == 0">Unrated</p>
+    <i ng-if="finalRating >= 1" class="fa fa-star"></i>
+    <i ng-if="finalRating >= 2" class="fa fa-star"></i>
+    <i ng-if="finalRating >= 3" class="fa fa-star"></i>
+    <i ng-if="finalRating >= 4" class="fa fa-star"></i>
+    <i ng-if="finalRating >= 5" class="fa fa-star"></i>
   </div>
-  <div class="skillsWrap">
+  <div ng-if="stylistCheck()" class="skillsWrap">
     <div class="skillBlock">
-      <div class="circles skillActive">
+      <div class="circles hair">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 width="377.733px" height="377.733px" viewBox="0 0 377.733 377.733" style="enable-background:new 0 0 377.733 377.733;"
         	 xml:space="preserve">
@@ -95,7 +96,7 @@
     </div>
 
     <div class="skillBlock">
-      <div class="circles">
+      <div class="circles nails">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 width="160.543px" height="160.543px" viewBox="0 0 160.543 160.543" style="enable-background:new 0 0 160.543 160.543;"
         	 xml:space="preserve">
@@ -162,7 +163,7 @@
     </div>
 
     <div class="skillBlock">
-      <div class="circles skillActive">
+      <div class="circles makeup">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 width="289.074px" height="289.074px" viewBox="0 0 289.074 289.074" style="enable-background:new 0 0 289.074 289.074;"
         	 xml:space="preserve">
@@ -243,16 +244,17 @@
   <div class="aboutWrap">
     <div class="about">
       <div class="aboutName">
-        <h1>Amy Gardener</h1>
-        <h1>Stylist</h1>
+        <h1>{{name}}</h1>
+        <h1 ng-if="stylistCheck()">Stylist</h1>
+        <h1 ng-if="!stylistCheck()">Model</h1>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo explicabo quibusdam assumenda sit rerum, ducimus nemo quisquam iure, veniam vel odio repudiandae pariatur expedita doloremque quas blanditiis vitae placeat.</p>
+      <p ng-if="stylistCheck()" >{{about}}</p>
     </div>
   </div>
-  <div class="availability">
+  <div ng-if="stylistCheck()" class="availability">
     <h1>Availability</h1>
     <div class="dates">
-      <div class="date">
+      <div class="date sunday">
         <div>
           S
         </div>
@@ -264,7 +266,7 @@
           <span class="sundayFinishingTime">2:30PM</span>
         </div>
       </div>
-      <div class="date dateActive">
+      <div class="date monday">
         <div>
           M
         </div>
@@ -276,7 +278,7 @@
           <span class="mondayFinishingTime">5:00PM</span>
         </div>
       </div>
-      <div class="date dateActive">
+      <div class="date tuesday">
         <div>
           T
         </div>
@@ -288,7 +290,7 @@
           <span class="tuesdayFinishingTime">5:00PM</span>
         </div>
       </div>
-      <div class="date">
+      <div class="date wednesday">
         <div>
           W
         </div>
@@ -300,7 +302,7 @@
           <span class="wednesdayFinishingTime">5:00PM</span>
         </div>
       </div>
-      <div class="date dateActive">
+      <div class="date thursday">
         <div>
           T
         </div>
@@ -312,7 +314,7 @@
           <span class="thursdayFinishingTime">5:00PM</span>
         </div>
       </div>
-      <div class="date">
+      <div class="date friday">
         <div>
           F
         </div>
@@ -324,7 +326,7 @@
           <span class="fridayFinishingTime">5:00PM</span>
         </div>
       </div>
-      <div class="date">
+      <div class="date saturday">
         <div>
           S
         </div>
