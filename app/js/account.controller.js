@@ -36,11 +36,14 @@
             function skillsCheck(){
               if($scope.skills.length === 3){
                 $('.skillBlock').children('.circles').addClass('skillActive');
-              }else if($scope.skills[0] === 'hair' || $scope.skills[1] === 'hair'){
+              }
+              if($scope.skills[0] === 'hair' || $scope.skills[1] === 'hair'){
                 $('.hair').addClass('skillActive');
-              }else if($scope.skills[0] === 'nails' || $scope.skills[1] === 'nails'){
+              }
+              if($scope.skills[0] === 'nails' || $scope.skills[1] === 'nails'){
                 $('.nails').addClass('skillActive');
-              }else if($scope.skills[0] === 'makeup' || $scope.skills[1] === 'makeup'){
+              }
+              if($scope.skills[0] === 'makeup' || $scope.skills[1] === 'makeup'){
                 $('.makeup').addClass('skillActive');
               }
             };
