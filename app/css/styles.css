@@ -1075,11 +1075,14 @@ IMPORTS
   align-items: center;
   background-color: rgba(0, 0, 0, 0.65);
   z-index: 99;
+  opacity: 1;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease; }
   .modalBackground .modal {
     background-color: whitesmoke;
     height: 70%;
@@ -1126,6 +1129,10 @@ IMPORTS
             background-color: #D5A5A2; }
             .modalBackground .modal .modalContent .modalDetails .acceptDecline .decline:hover {
               background-color: #F8D9D6; }
+
+.behind {
+  z-index: -100;
+  opacity: 0; }
 
 /**************************
   NAVBAR
