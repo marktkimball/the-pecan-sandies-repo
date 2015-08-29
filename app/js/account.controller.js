@@ -23,7 +23,11 @@
             $scope.stylist = foundUser[0].stylist;
             $scope.active = foundUser[0].active;
             $scope.cardInfo = foundUser[0].cardInfo;
-        })
+        });
+
+        $scope.modalToggle = function(){
+          $('.modalBackground').addClass('behind');
+        };
 
     })
 })();
