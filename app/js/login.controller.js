@@ -9,9 +9,10 @@
 
       $scope.login = function(event) {
         event.preventDefault;
-        
+
         var userInfo = $scope.userInfo;
         console.log("Login user: ", userInfo);
+        userInfo.email = userInfo.email.toLowerCase();
         LoginService.login(userInfo).success(function(data){
           if(data.email === userInfo.email) {
             if (data.stylist === true) {
@@ -25,26 +26,36 @@
         });
       };
 
-      $scope.signup = function(event){
+      $scope.signup = function(userInfo, event){
         event.preventDefault;
-        var userInfo = $scope.userInfo;
-        LoginService.signup(userInfo)
-        .success(function(data){
-          // console.log("SignUp: ", userInfo);
-          var num = data.length - 1
-          if (data[num].stylist === true) {
-            $scope.userInfo = data[num];
-            console.log($scope.userInfo);
-            $location.path('/form/' + data[num]._id);
-          } else {
-            $scope.userInfo = data[num];
-            console.log($scope.userInfo);
-            $location.path('/modelform/' + data[num]._id);
-          }
-        })
-        .error(function(error){
-          // console.log("Signup error: ", error);
-        });
+        console.log(event.target);
+        var someEmpty = $('input').filter(function(){
+            return $.trim(this.value).length === 0;
+        }).length > 0;
+        console.log(userInfo);
+        console.log($scope.userInfo);
+        if (someEmpty || $('[name=signupType]:checked').length === 0) {
+
+        } else {
+          var userInfo = $scope.userInfo;
+          LoginService.signup(userInfo)
+          .success(function(data){
+            // console.log("SignUp: ", userInfo);
+            var num = data.length - 1
+            if (data[num].stylist === true) {
+              $scope.userInfo = data[num];
+              console.log($scope.userInfo);
+              $location.path('/form/' + data[num]._id);
+            } else {
+              $scope.userInfo = data[num];
+              console.log($scope.userInfo);
+              $location.path('/modelform/' + data[num]._id);
+            }
+          })
+          .error(function(error){
+            // console.log("Signup error: ", error);
+          });
+        }
       }
 
       $scope.selectDay = function(day, event) {
@@ -76,15 +87,27 @@
         console.log($scope.userSkills);
       }
 
-      $scope.submitForm = function(event){
-        var routeId = $routeParams.Id;
-        $scope.userInfo._id = routeId;
-        $scope.userInfo.skills = $scope.userSkills;
-        $scope.userInfo.availability = $scope.userDays;
-        console.log($scope.userInfo);
-        LoginService.editAccount($scope.userInfo).success(function(data){
-           $location.path('/account/' + data._id);
-        });
+      $scope.submitForm = function(userinfo, event){
+        console.log(event);
+        var someEmpty = $('input[type=text]').filter(function(){
+            return $.trim(this.value).length === 0;
+        }).length > 0;
+
+        if (someEmpty || $scope.userDays.length === 0 || $scope.userSkills.length === 0) {
+          console.log(someEmpty);
+          console.log($scope.userDays.length);
+          console.log($scope.userSkills.length);
+
+        } else {
+          var routeId = $routeParams.Id;
+          $scope.userInfo._id = routeId;
+          $scope.userInfo.skills = $scope.userSkills;
+          $scope.userInfo.availability = $scope.userDays;
+          console.log($scope.userInfo);
+          LoginService.editAccount($scope.userInfo).success(function(data){
+             $location.path('/account/' + data._id);
+          });
+        }
       }
 
     })
