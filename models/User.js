@@ -23,7 +23,7 @@ var userSchema = new mongoose.Schema({
   prices: { type: Array, default: ''},
   rating: { type: Array, default: ''},
   availability: { type: Array, default: '' },
-  notifications: { type: Array, default: '' },
+  notifications: { type: Array },
   stylist: {type: Boolean },
   active: {type: Boolean },
   cardInfo: {type: Object, default: '' },

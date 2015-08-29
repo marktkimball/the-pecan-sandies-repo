@@ -2,25 +2,26 @@
 
 <div class="contentWrap mailboxWrap">
   <div class="mailList">
-    <div class="mail" ng-repeat="mail in testArray">
+    <div class="mail" ng-repeat="mail in notifications">
       <div class="mailInfo">
         <div class="mobileTimestamp">
-          4 minutes ago
+          {{mail.number}}
         </div>
         <div class="mailImage">
-          <img src="http://www.placehold.it/150x150">
+          <img src="{{mail.picture}}">
         </div>
         <div class="mailRating">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+          <p ng-if="finalRating == 0">Unrated</p>
+          <i ng-if="finalRating >= 1" class="fa fa-star"></i>
+          <i ng-if="finalRating >= 2" class="fa fa-star"></i>
+          <i ng-if="finalRating >= 3" class="fa fa-star"></i>
+          <i ng-if="finalRating >= 4" class="fa fa-star"></i>
+          <i ng-if="finalRating >= 5" class="fa fa-star"></i>
         </div>
       </div>
       <div class="mailSkills">
         <div class="mailName">
-          <h1>Amy Gardener</h1>
+          <h1>{{mail.name}}</h1>
         </div>
         <div class="mailSkill">
           <div class="mailSkillIcon">
@@ -256,7 +257,7 @@
       </div>
       <div class="mailActions">
         <div class="mailTimestamp">
-          4 minutes ago
+          {{mail.number}}
         </div>
         <div class="mailActionButtons">
           <div id="mailAccept">

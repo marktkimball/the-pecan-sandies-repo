@@ -531,11 +531,12 @@
       <div class="modalDetails">
         <h1>{{modalName}}</h1>
         <div class="rating">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+          <p ng-if="averageRating == 0">Unrated</p>
+          <i ng-if ="averageRating >= 1" class="fa fa-star"></i>
+          <i ng-if ="averageRating >= 2" class="fa fa-star"></i>
+          <i ng-if ="averageRating >= 3" class="fa fa-star"></i>
+          <i ng-if ="averageRating >= 4" class="fa fa-star"></i>
+          <i ng-if ="averageRating >= 5" class="fa fa-star"></i>
         </div>
         <div class="circles">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="289.074px" height="289.074px" viewBox="0 0 289.074 289.074" style="enable-background:new 0 0 289.074 289.074;" xml:space="preserve">
@@ -609,7 +610,7 @@
             </svg>
           </div>
         <div class="acceptDecline">
-          <div class="accept" ng-click="modalToggle(true)">
+          <div val="{{id}}" class="accept" ng-click="modalToggle(true)">
             <h1>CONFIRM</h1>
           </div>
           <div class="decline" ng-click="modalToggle(false)">

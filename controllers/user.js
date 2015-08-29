@@ -12,6 +12,38 @@ var secrets = require('../config/secrets');
  * Login page.
  */
 
+exports.sendNotification = function(req, res, next) {
+
+  User.find(function(err,user) {
+    var stylist;
+    var model;
+    var stylistIndex;
+    var modelIndex;
+    var currentIndex=0;
+    _.each(user, function(el){
+      if(el._id == req.body.styleid){
+        stylist = el;
+        stylistIndex = currentIndex;
+      }
+      if(el._id == req.body.modelid){
+        model = el;
+        modelIndex = currentIndex;
+      }
+      currentIndex++;
+    })
+
+    stylist.notifications.push(model);
+
+    user[stylistIndex].save(function(err) {
+      if(err) throw err;
+
+      })
+
+    res.send(user[stylistIndex]);
+    });
+
+}
+
 exports.updateStatus = function(req, res, next) {
   console.log('im working');
   User.find({_id: req.body._id}, function(err, user) {
@@ -145,7 +177,8 @@ exports.postSignup = function(req, res, next) {
     email: req.body.email,
     password: req.body.password,
     stylist:req.body.stylist,
-    active: false
+    active: false,
+    notifications: []
   });
 
   User.findOne({ email: req.body.email }, function(err, existingUser) {
