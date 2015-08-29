@@ -60,5 +60,14 @@
         console.log($scope.userSkills);
       }
 
+      $scope.submitForm = function(event){
+        var userInfo = $scope.userInfo;
+        userInfo.skills = $scope.userSkills;
+        userInfo.availability = $scope.userDays;
+        LoginService.editAccount(userInfo).success(function(data){
+          $location.path('/account/' + data._id);
+        });
+      }
+
     })
 })();

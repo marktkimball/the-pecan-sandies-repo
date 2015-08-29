@@ -7,15 +7,15 @@
     <form>
       <div class="formName">
         <h2>Name</h2>
-        <input type="text" placeholder="Name"/>
+        <input type="text" placeholder="Name" ng-model="userInfo.name"/>
       </div>
       <div class="formImage">
         <h2>Profile Picture</h2>
-        <input type="text" placeholder="Image URL"/>
+        <input type="text" placeholder="Image URL" ng-model="userInfo.picture"/>
       </div>
       <div class="formAbout">
         <h2>About (max 200 characters)</h2>
-        <textarea type="text" placeholder="Tell us a little about yourself!" cols="30" rows="5" maxlength="200"></textarea>
+        <textarea type="text" placeholder="Tell us a little about yourself!" cols="30" rows="5" maxlength="200" ng-model="userInfo.about"></textarea>
       </div>
       <div class="formSkills">
         <h2>Skills</h2>
@@ -339,7 +339,7 @@
         </div>
     </div>
     <div class="formSubmit">
-      <input type="submit" name="formSubmitButton" id="formSubmitButton" value="SUBMIT">
+      <input type="submit" name="formSubmitButton" id="formSubmitButton" value="SUBMIT" ng-click="submitForm(userInfo)">
     </div>
   </form>
   </div>
