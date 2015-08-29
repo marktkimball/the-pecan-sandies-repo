@@ -8,8 +8,14 @@
         return $http.get('/login', userInfo);
       };
 
+      var status = function(userInfo) {
+        console.log(userInfo);
+        return $http.put('/status', userInfo);
+      }
+
       return {
-        getUsers : getUsers
+        getUsers : getUsers,
+        status : status
       };
 
     });

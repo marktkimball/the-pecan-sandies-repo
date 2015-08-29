@@ -5,6 +5,7 @@
     .controller('AccountController', function($scope, $route, $routeParams, $location, AccountService){
 
         AccountService.getUsers().success(function(data){
+
             var routeId = $routeParams.Id;
             console.log(routeId);
             console.log(data);
@@ -24,6 +25,16 @@
             $scope.stylist = foundUser[0].stylist;
             $scope.active = foundUser[0].active;
             $scope.cardInfo = foundUser[0].cardInfo;
+
+            console.log($location.path());
+
+            $scope.activeCheck = function() {
+              if ($scope.active === true && $scope.stylist === true) {
+                return true;
+              } else {
+                return false;
+              }
+            }
 
             $scope.stylistCheck = function() {
               if ($scope.stylist === true) {
@@ -85,13 +96,29 @@
           });
 
         $scope.toggleStylin = function(){
+          event.preventDefault;
           if($scope.active === true){
-            $scope.active = false;
-          }else{
+            navigator.geolocation.getCurrentPosition(GetLocation);
+            function GetLocation(location) {
+              $scope.active = false;
+              var userInfo = {};
+              userInfo.userLocation = {};
+              userInfo.userLocation.latitude = location.coords.latitude;
+              userInfo.userLocation.longitude = location.coords.longitude;
+              userInfo._id = $routeParams.Id;
+              AccountService.status(userInfo);
+            }
+          } else {
             $scope.active = true;
             navigator.geolocation.getCurrentPosition(GetLocation);
             function GetLocation(location) {
-              console.log("LOCAL: ", location);
+              var userInfo = {};
+              userInfo.userLocation = {};
+              userInfo.userLocation.latitude = location.coords.latitude;
+              userInfo.userLocation.longitude = location.coords.longitude;
+              userInfo._id = $routeParams.Id;
+              console.log("LOCAL: ", userInfo);
+              AccountService.status(userInfo);
             }
           }
         }
