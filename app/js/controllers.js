@@ -4,6 +4,8 @@
     .module('beaut')
     .controller('MainController', function($scope, $route, $http, $q, $location, $window, MainService) {
 
+      $scope.testArray = [1,2,3,4,5,6,7,8,9,10];
+
       var getStylists = function(){
         MainService.getStylists()
           .success(function(data){
@@ -30,7 +32,7 @@
 
       $scope.modalToggle = function(response){
         $('.modalBackground').toggleClass('behind');
-        
+
       };
 
     })

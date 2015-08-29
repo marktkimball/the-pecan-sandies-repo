@@ -9,19 +9,24 @@ nav {
   @include flexbox(row, center, center);
 
   > div {
+    text-align: center;
     height: 100%;
     @include flexbox(row, center, center);
   }
 
   > div:first-of-type {
-    width: 23.625%;
+    width: 10%;
     font-size: 1.5rem;
     font-family: $display;
     color: whitesmoke;
+
+    > span:last-of-type {
+      display: none;
+    }
   }
 
   > div:nth-of-type(2) {
-    width: 21.375%;
+    width: 35%;
     @include flexbox(row, flex-end, center);
 
     > button {
@@ -46,6 +51,29 @@ nav {
 
       &:focus {
         outline: 0;
+      }
+
+      > span:last-of-type {
+        display: none;
+      }
+    }
+
+    > a {
+      display: none;
+      position: relative;
+      background-color: whitesmoke;
+      color: $c3;
+      border-radius: 5px;
+      width: 47.5%;
+      height: 70%;
+      z-index: 9;
+      font-size: 1rem;
+      @include transition;
+
+      &:hover {
+        text-decoration: none;
+        background-color: $c2;
+        color: white;
       }
     }
   }
@@ -95,11 +123,11 @@ nav {
     font-size: 1.4rem;
 
     > a {
-      color: whitesmoke;
+      color: white;
       @include transition;
 
       &:hover {
-        color: white;
+        color: $c2;
       }
     }
   }

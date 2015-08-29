@@ -1,4 +1,7 @@
 <div class="formPageWrap" ng-controller="LoginController">
+  <div class="formTop">
+    <a href="/#/login"><h1>Beaut</h1></a>
+  </div>
   <div class="headerWrap">
     <h1>Hello!</h1>
     <h2>We need some info before you can get started, beauty queen.</h2>
@@ -18,7 +21,7 @@
         <input type="text" placeholder="Number" ng-model="userInfo.number"/>
       </div>
       <div class="formAbout">
-        <h2>About (max 200 characters)</h2>
+        <h2>About <span>(max 200 characters)</span></h2>
         <textarea type="text" placeholder="Tell us a little about yourself!" cols="30" rows="5" maxlength="200" ng-model="userInfo.about"></textarea>
       </div>
       <div class="formSkills">
