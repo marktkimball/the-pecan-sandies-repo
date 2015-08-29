@@ -12,7 +12,7 @@
         $http.post('/signup', userInfo)
           .success(function(){
             // console.log("SignUp: ", userInfo);
-            $location.path('/login');
+            $location.path('/account');
           })
           .error(function(error){
             // console.log("Signup error: ", error);

@@ -30,7 +30,6 @@
     .skillBlock {
 
       .circles {
-        cursor: pointer;
         height: 150px;
         width: 150px;
         border-radius: 50%;
@@ -45,7 +44,7 @@
           @include transition;
         }
 
-        &:hover {
+        &.skillActive {
           background-color: $c2;
 
           & + .skillsPrice {
@@ -59,6 +58,7 @@
       }
 
       .skillsPrice {
+        color: $dt;
         font-size: 1.1rem;
         margin-top: 12.5px;
         text-align: center;
@@ -75,10 +75,13 @@
     margin-top: 50px;
     font-size: 1rem;
 
-    h1 {
-      text-align: center;
+    .aboutName {
       margin-bottom: 25px;
-      font-size: 1.75rem;
+      @include flexbox(row, space-between, center);
+
+      h1 {
+        font-size: 1.75rem;
+      }
     }
 
     p {
@@ -105,8 +108,9 @@
 
       .date {
         height: auto;
-        width: 14.25%;
+        width: 14%;
         text-align: center;
+        color: $dt;
         @include transition;
 
         > div:first-of-type {
@@ -119,14 +123,104 @@
           font-size: 0.75rem;
         }
       }
-      .date:hover {
-        cursor: pointer;
+      .date.dateActive {
         background-color: $c2;
         color: white;
       }
-      .dateInactive {
-        color: $dt;
+    }
+  }
+}
+
+.modalBackground{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.65);
+  z-index: 5;
+  opacity:1;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  @include transition;
+  .modal{
+    background-color: whitesmoke;
+    height:70%;
+    width:70%;
+    z-index:100;
+    position:relative;
+    display:block;
+    border-radius: 10px;
+    border: 5px solid $c1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    .modalContent{
+      text-align: center;
+      padding:25px;
+      h1{
+        margin-bottom:50px;
+      }
+      h3{
+        margin-bottom:25px;
+      }
+      .modalDetails{
+        padding-top: 25px;
+        border: 2px solid $c2;
+        border-radius: 5px;
+        h1{
+          margin-bottom:15px;
+        }
+        .rating{
+          font-size: 1rem;
+          padding:0;
+        }
+        .acceptDecline{
+          display:flex;
+          margin-top:50px;
+          h1{
+            margin:0px;
+            padding:30px;
+          }
+          div{
+            color:white;
+            cursor: pointer;
+            width:50%;
+            @include transition;
+          }
+          .accept{
+            background-color:$c3;
+            &:hover{
+              background-color: $c2;
+            }
+          }
+          .decline{
+            background-color:#D5A5A2;
+            &:hover{
+              background-color: $c1;
+            }
+          }
+        }
+        .circles {
+          width: 75px;
+          height: 75px;
+          margin:auto;
+          margin-top:25px;
+          margin-bottom: 25px;
+          background-color: $c3;
+          border-radius: 50%;
+          @include flexbox(row, center, center);
+          }
+        svg {
+          width: 50px;
+          height: 50px;
+          fill: white;
+        }
       }
     }
   }
+}
+
+.behind{
+  z-index:-1;
+  opacity:0;
 }
