@@ -78,8 +78,16 @@ exports.editaccount = function(req, res, next) {
     user[0].name = req.body.name;
     user[0].picture = req.body.picture;
     user[0].about = req.body.about;
-    user[0].availability = req.body.availability;
-    user[0].skills = req.body.skills;
+    user[0].sundayTimes = req.body.sundayTimes;
+    user[0].mondayTimes = req.body.mondayTimes;
+    user[0].tuesdayTimes = req.body.tuesdayTimes;
+    user[0].wednesdayTimes = req.body.wednesdayTimes;
+    user[0].thursdayTimes = req.body.thursdayTimes;
+    user[0].fridayTimes = req.body.fridayTimes;
+    user[0].saturdayTimes = req.body.saturdayTimes;
+    user[0].hairPrice = req.body.hairPrice;
+    user[0].nailsPrice = req.body.nailsPrice;
+    user[0].makeupPrice = req.body.makeupPrice;
 
     console.log('updated user', user[0]);
 
@@ -453,6 +461,6 @@ exports.postForgot = function(req, res, next) {
   });
 };
 
-exports.getMe = function(req, res, next ) {
+exports.getMe = function(req, res, next) {
   res.send(req.user);
 }

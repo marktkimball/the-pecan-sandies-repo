@@ -4,7 +4,8 @@
   angular
     .module('beaut', [
       'ngRoute',
-      'underscore'
+      'underscore',
+      'moment'
     ])
     .config(function ($routeProvider) {
       $routeProvider
@@ -51,9 +52,22 @@
           redirectTo: '/404'
         });
     })
+
+    .filter('militaryToAMPM', function() {
+    return function(time) {
+        return moment(time, 'HH:mm').format('h:mm a');
+      };
+    });
+
     angular
       .module('underscore', [])
       .factory('_', function ($window) {
         return $window._;
     });
+    angular
+      .module('moment', [])
+      .factory('moment', function ($window) {
+        return $window.moment;
+    });
+
 })();

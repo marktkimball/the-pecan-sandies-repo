@@ -68,7 +68,6 @@
           $scope.userDays.push(day);
           $(clicked).addClass('activeDay');
         }
-        console.log($scope.userDays);
       }
 
       $scope.selectSkills = function(skill, event) {
@@ -84,11 +83,10 @@
           $scope.userSkills.push(skill);
           $(clicked).addClass('activeSkill');
         }
-        console.log($scope.userSkills);
       }
 
-      $scope.submitForm = function(userinfo, event){
-        console.log("info", userinfo);
+      $scope.submitForm = function(userInfo, event){
+        console.log("info", userInfo);
         $location.path('/account/' + routeId);
         var someEmpty = $('input[type=text]').filter(function(){
             return $.trim(this.value).length === 0;
@@ -111,13 +109,9 @@
           }
           checkTimes();
 
-
-            console.log("IM here");
             var routeId = $routeParams.Id;
             $scope.userInfo._id = routeId;
-            $scope.userInfo.skills = $scope.userSkills;
-            $scope.userInfo.availability = $scope.userDays;
-            console.log($scope.userInfo);
+            console.log("Submit Form Click: " , $scope.userInfo);
             LoginService.editAccount($scope.userInfo).success(function(data){
                $location.path('/account/' + routeId);
             });

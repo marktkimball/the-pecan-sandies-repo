@@ -12,7 +12,7 @@
     <i ng-if="finalRating >= 4" class="fa fa-star"></i>
     <i ng-if="finalRating >= 5" class="fa fa-star"></i>
   </div>
-  <div ng-if="stylistCheck()" class="skillsWrap">
+  <div ng-if="stylist" class="skillsWrap">
     <div class="skillBlock">
       <div class="circles hair">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -91,7 +91,7 @@
         </svg>
       </div>
       <div class="skillsPrice hairPrice">
-        $12.50
+        {{hairPrice | currency}}
       </div>
     </div>
 
@@ -158,7 +158,7 @@
         </svg>
       </div>
       <div class="skillsPrice nailsPrice">
-        $15.00
+        {{nailsPrice | currency}}
       </div>
     </div>
 
@@ -237,7 +237,7 @@
         </svg>
       </div>
       <div class="skillsPrice makeupPrice">
-        $20.00
+        {{makeupPrice | currency}}
       </div>
     </div>
   </div>
@@ -245,13 +245,13 @@
     <div class="about">
       <div class="aboutName">
         <h1>{{name}}</h1>
-        <h1 ng-if="stylistCheck()">Stylist</h1>
-        <h1 ng-if="!stylistCheck()">Model</h1>
+        <h1 ng-if="stylist">Stylist</h1>
+        <h1 ng-if="!stylist">Model</h1>
       </div>
-      <p ng-if="stylistCheck()" >{{about}}</p>
+      <p ng-if="stylist" >{{about}}</p>
     </div>
   </div>
-  <div ng-if="stylistCheck()" class="availability">
+  <div ng-if="stylist" class="availability">
     <h1>Availability</h1>
     <div class="dates">
       <div class="date sunday">
@@ -259,11 +259,11 @@
           S
         </div>
         <div>
-          <span class="sundayStartingTime">Start</span>
+          <span class="sundayStartingTime">{{sundayTimes.start}}</span>
           <br>
           -
           <br>
-          <span class="sundayFinishingTime">Finish</span>
+          <span class="sundayFinishingTime">{{sundayTimes.end}}</span>
         </div>
       </div>
       <div class="date monday">
@@ -271,11 +271,11 @@
           M
         </div>
         <div>
-          <span class="mondayStartingTime">Start</span>
+          <span class="mondayStartingTime">{{mondayTimes.start | date : 'militaryToAMPM'}}</span>
           <br>
           -
           <br>
-          <span class="mondayFinishingTime">Finish</span>
+          <span class="mondayFinishingTime">{{mondayTimes.end | date : 'militaryToAMPM'}}</span>
         </div>
       </div>
       <div class="date tuesday">
@@ -283,11 +283,11 @@
           T
         </div>
         <div>
-          <span class="tuesdayStartingTime">Start</span>
+          <span class="tuesdayStartingTime">{{tuesdayTimes.start}}</span>
           <br>
           -
           <br>
-          <span class="tuesdayFinishingTime">Finish</span>
+          <span class="tuesdayFinishingTime">{{tuesdayTimes.end}}</span>
         </div>
       </div>
       <div class="date wednesday">
@@ -295,11 +295,11 @@
           W
         </div>
         <div>
-          <span class="wednesdayStartingTime">Start</span>
+          <span class="wednesdayStartingTime">{{wednesdayTimes.start}}</span>
           <br>
           -
           <br>
-          <span class="wednesdayFinishingTime">Finish</span>
+          <span class="wednesdayFinishingTime">{{wednesdayTimes.end}}</span>
         </div>
       </div>
       <div class="date thursday">
@@ -307,11 +307,11 @@
           T
         </div>
         <div>
-          <span class="thursdayStartingTime">Start</span>
+          <span class="thursdayStartingTime">{{thursdayTimes.start}}</span>
           <br>
           -
           <br>
-          <span class="thursdayFinishingTime">Finish</span>
+          <span class="thursdayFinishingTime">{{thursdayTimes.end}}</span>
         </div>
       </div>
       <div class="date friday">
@@ -319,11 +319,11 @@
           F
         </div>
         <div>
-          <span class="fridayStartingTime">Start</span>
+          <span class="fridayStartingTime">{{fridayTimes.start}}</span>
           <br>
           -
           <br>
-          <span class="fridayFinishingTime">Finish</span>
+          <span class="fridayFinishingTime">{{fridayTimes.end}}</span>
         </div>
       </div>
       <div class="date saturday">
@@ -331,11 +331,11 @@
           S
         </div>
         <div>
-          <span class="saturdayStartingTime">Start</span>
+          <span class="saturdayStartingTime">{{saturdayTimes.start}}</span>
           <br>
           -
           <br>
-          <span class="saturdayFinishingTime">Finish</span>
+          <span class="saturdayFinishingTime">{{saturdayTimes.end}}</span>
         </div>
       </div>
     </div>

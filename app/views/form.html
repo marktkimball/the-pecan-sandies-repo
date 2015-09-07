@@ -105,7 +105,7 @@
               </svg>
             </div>
             <div class="formHairPrice">
-              <input type="number" name="formHairPriceInput" id="formHairPriceInput" step="1" disabled>
+              <input type="number" name="formHairPriceInput" id="formHairPriceInput" ng-model="userInfo.hairPrice" step="1" disabled>
             </div>
           </div>
           <div class="radioSkill">
@@ -171,7 +171,7 @@
               </svg>
             </div>
             <div class="formNailsPrice">
-              <input type="number" name="formNailsPriceInput" id="formNailsPriceInput" step="1" disabled>
+              <input type="number" name="formNailsPriceInput" id="formNailsPriceInput" ng-model="userInfo.nailsPrice" step="1" disabled>
             </div>
           </div>
           <div class="radioSkill">
@@ -249,7 +249,7 @@
               </svg>
             </div>
             <div class="formMakeupPrice">
-              <input type="number" name="formMakeupPriceInput" id="formMakeupPriceInput" step="1" disabled>
+              <input type="number" name="formMakeupPriceInput" id="formMakeupPriceInput" ng-model="userInfo.makeupPrice" step="1" disabled>
             </div>
           </div>
         </div>
@@ -264,11 +264,11 @@
               S
             </div>
             <div>
-              <input type="time" name="formSundayStart" id="formSundayStart">
+              <input type="time" name="formSundayStart" id="formSundayStart" ng-model="userInfo.sundayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formSundayEnd" id="formSundayEnd">
+              <input type="time" name="formSundayEnd" id="formSundayEnd" ng-model="userInfo.sundayTimes.end">
             </div>
           </div>
           <div class="date">
@@ -276,11 +276,11 @@
               M
             </div>
             <div>
-              <input type="time" name="formMondayStart" id="formMondayStart">
+              <input type="time" name="formMondayStart" id="formMondayStart" ng-model="userInfo.mondayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formMondayEnd" id="formMondayEnd">
+              <input type="time" name="formMondayEnd" id="formMondayEnd" ng-model="userInfo.mondayTimes.end">
             </div>
           </div>
           <div class="date">
@@ -288,11 +288,11 @@
               T
             </div>
             <div>
-              <input type="time" name="formTuesdayStart" id="formTuesdayStart">
+              <input type="time" name="formTuesdayStart" id="formTuesdayStart" ng-model="userInfo.tuesdayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formTuesdayEnd" id="formTuesdayEnd">
+              <input type="time" name="formTuesdayEnd" id="formTuesdayEnd" ng-model="userInfo.tuesdayTimes.end">
             </div>
           </div>
           <div class="date">
@@ -300,11 +300,11 @@
               W
             </div>
             <div>
-              <input type="time" name="formWednesdayStart" id="formWednesdayStart">
+              <input type="time" name="formWednesdayStart" id="formWednesdayStart" ng-model="userInfo.wednesdayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formWednesdayEnd" id="formWednesdayEnd">
+              <input type="time" name="formWednesdayEnd" id="formWednesdayEnd" ng-model="userInfo.wednesdayTimes.end">
             </div>
           </div>
           <div class="date">
@@ -312,11 +312,11 @@
               T
             </div>
             <div>
-              <input type="time" name="formThursdayStart" id="formThursdayStart">
+              <input type="time" name="formThursdayStart" id="formThursdayStart" ng-model="userInfo.thursdayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formThursdayEnd" id="formThursdayEnd">
+              <input type="time" name="formThursdayEnd" id="formThursdayEnd" ng-model="userInfo.thursdayTimes.end">
             </div>
           </div>
           <div class="date">
@@ -324,11 +324,11 @@
               F
             </div>
             <div>
-              <input type="time" name="formFridayStart" id="formFridayStart">
+              <input type="time" name="formFridayStart" id="formFridayStart" ng-model="userInfo.fridayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formFridayEnd" id="formFridayEnd">
+              <input type="time" name="formFridayEnd" id="formFridayEnd" ng-model="userInfo.fridayTimes.end">
             </div>
           </div>
           <div class="date">
@@ -336,11 +336,11 @@
               S
             </div>
             <div>
-              <input type="time" name="formSaturdayStart" id="formSaturdayStart">
+              <input type="time" name="formSaturdayStart" id="formSaturdayStart" ng-model="userInfo.saturdayTimes.start">
               <br>
               to
               <br>
-              <input type="time" name="formSaturdayEnd" id="formSaturdayEnd">
+              <input type="time" name="formSaturdayEnd" id="formSaturdayEnd" ng-model="userInfo.saturdayTimes.end">
             </div>
           </div>
         </div>
