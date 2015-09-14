@@ -4,13 +4,13 @@
     <span>B</span>
   </div>
   <div>
-    <button ng-if="!stylistCheck()" id="stylistActivate">
+    <button ng-if="!stylist" id="stylistActivate">
         <a href="/#/feed/{{userId}}"><i class="fa fa-search"></i></a>
       </button>
-      <button ng-if="!activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="!active">
+      <button ng-if="!activeCheck() && stylist" id="stylistActivate" ng-click="toggleStylin()" ng-if="!active">
         <i class="fa fa-scissors"></i>
       </button>
-      <button ng-if="activeCheck() && stylistCheck()" id="stylistActivate" ng-click="toggleStylin()" ng-if="active">
+      <button ng-if="activeCheck() && stylist" id="stylistActivate" ng-click="toggleStylin()" ng-if="active">
          <i class="fa fa-times"></i>
         </button>
     <a href="/#/mailbox">

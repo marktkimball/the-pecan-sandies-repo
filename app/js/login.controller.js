@@ -9,17 +9,11 @@
 
       $scope.login = function(event) {
         event.preventDefault;
-
         var userInfo = $scope.userInfo;
-        console.log("Login user: ", userInfo);
         userInfo.email = userInfo.email.toLowerCase();
         LoginService.login(userInfo).success(function(data){
           if(data.email === userInfo.email) {
-            if (data.stylist === true) {
-              $location.path('/account/'+ data._id);
-            } else {
-              $location.path('/feed');
-            }
+            $location.path('/account/'+ data._id);
           } else {
             alert('Must sign up or wrong info!');
           }
@@ -28,19 +22,14 @@
 
       $scope.signup = function(userInfo, event){
         event.preventDefault;
-        console.log(event.target);
         var someEmpty = $('input').filter(function(){
             return $.trim(this.value).length === 0;
         }).length > 0;
-        console.log(userInfo);
-        console.log($scope.userInfo);
         if (someEmpty || $('[name=signupType]:checked').length === 0) {
-
         } else {
           var userInfo = $scope.userInfo;
           LoginService.signup(userInfo)
           .success(function(data){
-            // console.log("SignUp: ", userInfo);
             var num = data.length - 1
             if (data[num].stylist === true) {
               $scope.userInfo = data[num];
@@ -53,7 +42,6 @@
             }
           })
           .error(function(error){
-            // console.log("Signup error: ", error);
           });
         }
       }
@@ -86,38 +74,12 @@
       }
 
       $scope.submitForm = function(userInfo, event){
-        console.log("info", userInfo);
         $location.path('/account/' + routeId);
-        var someEmpty = $('input[type=text]').filter(function(){
-            return $.trim(this.value).length === 0;
-        }).length > 0;
-
-        if (someEmpty || $scope.userDays.length === 0 || $scope.userSkills.length === 0) {} else {
-          var noTimes = [];
-
-          var checkTimes = function() {
-            _.each($scope.userDays, function(el, idx, list) {
-              var startDate = $('.' + $scope.userDays[idx]).siblings('div').children('input:first-of-type');
-              var endDate = $('.' + $scope.userDays[idx]).siblings('div').children('input:first-of-type');
-              if (startDate[0].value === '' || endDate[0].value === '') {
-                console.log('No time!');
-                noTimes.push($scope.userDays[idx]);
-              } else {
-                noTimes = _.without(noTimes, $scope.userDays[idx]);
-              }
-            })
-          }
-          checkTimes();
-
-            var routeId = $routeParams.Id;
-            $scope.userInfo._id = routeId;
-            console.log("Submit Form Click: " , $scope.userInfo);
-            LoginService.editAccount($scope.userInfo).success(function(data){
-               $location.path('/account/' + routeId);
-            });
-
-        }
-      }
-
+        var routeId = $routeParams.Id;
+        $scope.userInfo._id = routeId;
+        LoginService.editAccount($scope.userInfo).success(function(data){
+          $location.path('/account/' + routeId);
+        });
+      };
     })
 })();

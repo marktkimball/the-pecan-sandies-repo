@@ -208,6 +208,7 @@ nav {
       transition: all .25s ease; }
       nav > div:nth-of-type(2) > button a {
         color: #42929D;
+        width: 100%;
         -webkit-transition: all .25s ease;
         transition: all .25s ease; }
       nav > div:nth-of-type(2) > button:hover {
@@ -242,7 +243,7 @@ nav {
     nav > div:nth-of-type(3) > img {
       border-radius: 50%;
       position: relative;
-      top: 0;
+      top: -20px;
       max-width: 110%;
       border: 10px solid #42929D;
       box-sizing: content-box;
@@ -919,6 +920,8 @@ nav {
     padding-top: 50px;
     height: 1000px;
     overflow: scroll; }
+    .feedWrap .feedList h3 {
+      text-align: center; }
     .feedWrap .feedList .feedCard {
       margin: 0 auto;
       width: 95%;

@@ -4,13 +4,11 @@
     .module('beaut')
     .controller('MainController', function($scope, $rootScope, $route, $routeParams, $http, $q, $location, $window, MainService, AccountService) {
 
-      $scope.testArray = [1,2,3,4,5,6,7,8,9,10];
-
       var getStylists = function(){
         MainService.getStylists()
           .success(function(data){
             var totalStylists = _.filter(data, function(el){
-              if(el.stylist){
+              if(el.stylist && el.active){
                 return el;
               }
             });
@@ -37,7 +35,6 @@
 
       var getUser = function(){
         AccountService.getUsers().success(function(data){
-
             var routeId = $routeParams.Id;
             $scope.userId = routeId;
             console.log(routeId);

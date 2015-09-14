@@ -264,8 +264,8 @@
       </div>
     </div>
   </div>
-  <div class="feedList"s>
-    <div class="feedCard" ng-repeat="card in stylists | filter:filter">
+  <div class="feedList">
+    <div class="feedCard" ng-if="stylists" ng-repeat="card in stylists | filter:filter">
       <div class="feedCardInfo">
         <div class="feedCardImage">
           <img class="feedCardPicture" src="{{card.picture}}">
@@ -518,6 +518,10 @@
       <div class="feedCardBook">
         <button id="feedCardBookButton" ng-click="createModal(card)">BOOK</button>
       </div>
+    </div>
+    <div ng-if="stylists.length == 0">
+      <h3>Sorry, no active stylists.</h3>
+      <h3>Check back later.</h3>
     </div>
   </div>
 
